@@ -19,10 +19,10 @@ Route::get('blog', 'BlogController@index');
 Route::get('blog/{slug}', 'BlogController@showPost');
 
 // Admin area
-Route::get('/admin', function () {
+Route::get('admin', function () {
     return redirect('/admin/post');
 });
-$router->group([
+Route::group([
     'namespace'  => 'Admin',
     'middleware' => 'auth',
 ], function () {
