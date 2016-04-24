@@ -36,7 +36,7 @@ class PostCreateRequest extends Request
 
     public function postFillData()
     {
-        $publishedAt = new Carbon(
+        $published_at = new Carbon(
             $this->publish_date . ' ' . $this->publish_time
         );
 
