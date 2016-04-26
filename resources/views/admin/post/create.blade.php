@@ -49,4 +49,4 @@
 
 @stop
 
-@include('admin.post._js');
+@include('admin.post._js')

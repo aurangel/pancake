@@ -4,7 +4,7 @@
     <script src="{{ asset('/js/pickadate/picker.time.js') }}"></script>
     <script src="{{ asset('/js/selectize/selectize.min.js') }}"></script>
     <script type="text/javascript">
-        $(function () {
+        $(document).load(function () {
             $("#publish_date").pickadate({
                 format: "mmm-d-yyyy"
             });
