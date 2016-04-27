@@ -54,5 +54,7 @@ class Tag extends Model
         $tagModel = static::whereTag($tag)->first();
 
         return $tagModel ? $tagModel->layout : $default;
+        
+        
     }
 }
