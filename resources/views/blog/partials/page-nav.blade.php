@@ -1,30 +1,27 @@
-{{-- Navigation --}}
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        {{-- Brand and toggle get grouped for better mobile display --}}
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#navbar-main">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">{{ config('blog.name') }}</a>
+<header>
+    <div class="container">
+        <div class="top-line">
+            <a class="logo" href="/"><img src="{{ asset('assets/img/logo.png') }}" alt=""></a>
+            <button class="cmn-toggle-switch"><span></span></button>
         </div>
-
-        {{-- Collect the nav links, forms, and other content for toggling --}}
-        <div class="collapse navbar-collapse" id="navbar-main">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="/contact">Contact</a>
-                </li>
-            </ul>
+        <a class="h-search"><i class="fa fa-search"></i></a>
+        <div class="nav-container">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="#">lifestyle</a></li>
+                    <li><a href="#">travel</a></li>
+                    <li><a href="#">tech</a></li>
+                    <li><a href="#">design</a></li>
+                    <li><a href="#">fashion</a></li>
+                </ul>
+            </nav>
+            <nav class="sub-nav">
+                <ul>
+                    <li><a href="/about">About me</a></li>
+                    <li><a href="/contact">contact</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-</nav>
+</header>

@@ -1,89 +1,91 @@
 @extends('blog.layouts.master')
 
-@section('page-header')
-    <header class="intro-header"
-            style="background-image: url('{{ pageImage($page_image) }}')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>{{ $title }}</h1>
-                        <hr class="small">
-                        <h2 class="subheading">{{ $subtitle }}</h2>
+@section('content')
+    <div id="content-wrapper">
+        @include('blog.partials.slider')
+
+        <div class="content-wrapper-content big-block type-2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-9">
+
+                        <div class="post-list type-2">
+                            {{-- The Posts --}}
+                            @foreach ($posts as $k => $post)
+                                <div class="blog-post style-2 @if ($k % 2 == 0) {{ '' }} @else {{ 'type-2' }} @endif ">
+                                    <a href="" class="img"><img src="{{ asset('assets/img/img35.jpg') }}" alt="" /></a>
+                                    <div class="content">
+                                        <div class="post-date">
+                                            {{ $post->published_at->format('F j, Y') }}
+
+                                            @if ($post->tags->count())
+                                                / {!! join(', ', $post->tagLinks('')) !!}
+                                            @endif
+                                        </div>
+                                        <a href="{{ $post->url($tag) }}" class="title">{{ $post->title }}</a>
+                                        @if ($post->subtitle)
+                                            <p class="description">
+                                                {{ $post->subtitle }}
+                                            </p>
+                                        @endif
+                                        <div class="post-social clearfix">
+                                            <span>
+                                                <a class="post-social-link soc-n" href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                                <a class="post-social-link soc-n" href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a class="post-social-link" href="#">
+                                                    <i class="fa fa-heart-o"></i> 15 Likes
+                                                </a>
+                                                <a class="post-social-link" href="#">
+                                                    <i class="fa fa-comment-o"></i> 10 Comments
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="pagination type-2">
+                            {{-- Reverse direction --}}
+                            @if ($reverse_direction)
+                                @if ($posts->currentPage() > 1)
+                                    <a class="page-left"
+                                       href="{!! $posts->url($posts->currentPage() - 1) !!}">
+                                        Previous {{ $tag->tag }} Posts
+                                    </a>
+                                @endif
+                                @if ($posts->hasMorePages())
+                                    <a class="page-right"
+                                       href="{!! $posts->nextPageUrl() !!}">
+                                        Next {{ $tag->tag }} Posts
+                                    </a>
+                                @endif
+                            @else
+                                @if ($posts->currentPage() > 1)
+                                    <a class="page-left"
+                                       href="{!! $posts->url($posts->currentPage() - 1) !!}">
+                                        Newer {{ $tag ? $tag->tag : '' }} Posts
+                                    </a>
+                                @endif
+                                @if ($posts->hasMorePages())
+                                    <a class="page-right"
+                                       href="{!! $posts->nextPageUrl() !!}">
+                                        Older {{ $tag ? $tag->tag : '' }} Posts
+                                    </a>
+                                @endif
+                            @endif
+                        </div>
                     </div>
+
+                    @include('blog.partials.sidebar')
                 </div>
             </div>
-        </div>
-    </header>
-@stop
-
-@section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-                {{-- The Posts --}}
-                @foreach ($posts as $post)
-                    <div class="post-preview">
-                        <a href="{{ $post->url($tag) }}">
-                            <h2 class="post-title">{{ $post->title }}</h2>
-                            @if ($post->subtitle)
-                                <h3 class="post-subtitle">{{ $post->subtitle }}</h3>
-                            @endif
-                        </a>
-                        <p class="post-meta">
-                            Posted on {{ $post->published_at->format('F j, Y') }}
-                            @if ($post->tags->count())
-                                in
-                                {!! join(', ', $post->tagLinks()) !!}
-                            @endif
-                        </p>
-                    </div>
-                    <hr>
-                @endforeach
-
-                {{-- The Pager --}}
-                <ul class="pager">
-
-                    {{-- Reverse direction --}}
-                    @if ($reverse_direction)
-                        @if ($posts->currentPage() > 1)
-                            <li class="previous">
-                                <a href="{!! $posts->url($posts->currentPage() - 1) !!}">
-                                    <i class="fa fa-long-arrow-left fa-lg"></i>
-                                    Previous {{ $tag->tag }} Posts
-                                </a>
-                            </li>
-                        @endif
-                        @if ($posts->hasMorePages())
-                            <li class="next">
-                                <a href="{!! $posts->nextPageUrl() !!}">
-                                    Next {{ $tag->tag }} Posts
-                                    <i class="fa fa-long-arrow-right"></i>
-                                </a>
-                            </li>
-                        @endif
-                    @else
-                        @if ($posts->currentPage() > 1)
-                            <li class="previous">
-                                <a href="{!! $posts->url($posts->currentPage() - 1) !!}">
-                                    <i class="fa fa-long-arrow-left fa-lg"></i>
-                                    Newer {{ $tag ? $tag->tag : '' }} Posts
-                                </a>
-                            </li>
-                        @endif
-                        @if ($posts->hasMorePages())
-                            <li class="next">
-                                <a href="{!! $posts->nextPageUrl() !!}">
-                                    Older {{ $tag ? $tag->tag : '' }} Posts
-                                    <i class="fa fa-long-arrow-right"></i>
-                                </a>
-                            </li>
-                        @endif
-                    @endif
-                </ul>
-            </div>
-
         </div>
     </div>
 @stop

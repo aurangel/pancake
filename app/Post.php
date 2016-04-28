@@ -136,17 +136,25 @@ class Post extends Model
     /**
      * Return array of tag links
      *
+     * @param string $entity
      * @param string $base
      * @return array
      */
-    public function tagLinks($base = '/blog?tag=%TAG%')
+    public function tagLinks($entity, $base = '/blog?tag=%TAG%')
     {
         $tags = $this->tags()->lists('tag');
         $return = [];
-        
+
         foreach ($tags as $tag) {
             $url = str_replace('%TAG%', urlencode($tag), $base);
-            $return[] = '<a href="' . $url . '">' . e($tag) . '</a>';
+
+            if ($entity == 'slider') {
+                $return[] = e($tag);
+            } elseif ($entity == 'post') {
+                $return[] = '<a class="tag" href="' . $url . '">' . e($tag) . '</a>';
+            } else {
+                $return[] = '<a class="tag-name" href="' . $url . '">' . e($tag) . '</a>';
+            }
         }
         
         return $return;
