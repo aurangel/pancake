@@ -45,4 +45,9 @@ class BlogController extends Controller
 
         return response($map)->header('Content-type', 'text/xml');
     }
+
+    public function showAbout()
+    {
+        return view('blog.about');
+    }
 }

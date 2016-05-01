@@ -13,7 +13,8 @@
         @foreach ($posts as $post)
             <div class="swiper-slide">
                 <a href="{{ $post->url($tag) }}">
-                    <img src="assets/img/pm1.jpg" alt="" class="center-image">
+                    <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
+                         alt="" class="center-image">
                     <div class="bg-vs"></div>
                     <div class="content">
                         <p class="post-date">

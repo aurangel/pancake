@@ -44,11 +44,17 @@
                                 @if ($tag && $tag->reverse_direction)
                                     @if ($post->olderPost($tag))
                                         <div class="left">
-                                            <a href="#" class="img">
-                                                <img src="{{ asset('assets/img/img82.jpg') }}" alt="">
+                                            <a href="{!! $post->olderPost($tag)->url($tag) !!}" class="img">
+                                                <img src="{{ $post->page_image }}" alt="">
                                             </a>
                                             <div class="content">
-                                                <div class="post-date"><span class="date">July 20, 2015</span> / <a href="#" class="tag-name">Travel</a></div>
+                                                <div class="post-date">
+                                                    <span class="date">{{ $post->published_at->format('F j, Y') }}</span>
+
+                                                    @if ($post->tags->count())
+                                                        / {!! join(', ', $post->tagLinks('')) !!}
+                                                    @endif
+                                                </div>
                                                 <a href="{!! $post->olderPost($tag)->url($tag) !!}"
                                                    class="title">
                                                     Previous {{ $tag->tag }} Posts
@@ -58,11 +64,17 @@
                                     @endif
                                     @if ($post->newerPost($tag))
                                         <div class="right">
-                                            <a href="#" class="img">
-                                                <img src="{{ asset('assets/img/img83.jpg') }}" alt="">
+                                            <a href="{!! $post->newerPost($tag)->url($tag) !!}" class="img">
+                                                <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}" alt="">
                                             </a>
                                             <div class="content">
-                                                <div class="post-date"><span class="date">July 20, 2015</span> / <a href="#" class="tag-name">Travel</a></div>
+                                                <div class="post-date">
+                                                    <span class="date">{{ $post->published_at->format('F j, Y') }}</span>
+
+                                                    @if ($post->tags->count())
+                                                        / {!! join(', ', $post->tagLinks('')) !!}
+                                                    @endif
+                                                </div>
                                                 <a href="{!! $post->newerPost($tag)->url($tag) !!}"
                                                    class="title">
                                                     Next {{ $tag->tag }} Posts
@@ -73,11 +85,17 @@
                                 @else
                                     @if ($post->newerPost($tag))
                                         <div class="left">
-                                            <a href="#" class="img">
-                                                <img src="{{ asset('assets/img/img82.jpg') }}" alt="">
+                                            <a href="{!! $post->newerPost($tag)->url($tag) !!}" class="img">
+                                                <img src="{{ asset(config('blog.uploads.webpath') . $post->newerPost($tag)->page_image) }}" alt="">
                                             </a>
                                             <div class="content">
-                                                <div class="post-date"><span class="date">July 20, 2015</span> / <a href="#" class="tag-name">Travel</a></div>
+                                                <div class="post-date">
+                                                    <span class="date">{{ $post->published_at->format('F j, Y') }}</span>
+
+                                                    @if ($post->tags->count())
+                                                        / {!! join(', ', $post->tagLinks('')) !!}
+                                                    @endif
+                                                </div>
                                                 <a href="{!! $post->newerPost($tag)->url($tag) !!}"
                                                    class="title">
                                                     Newer {{ $tag ? $tag->tag : '' }} Posts
@@ -87,11 +105,17 @@
                                     @endif
                                     @if ($post->olderPost($tag))
                                         <div class="right">
-                                            <a href="#" class="img">
-                                                <img src="{{ asset('assets/img/img83.jpg') }}" alt="">
+                                            <a href="{!! $post->olderPost($tag)->url($tag) !!}" class="img">
+                                                <img src="{{ asset(config('blog.uploads.webpath') . $post->olderPost($tag)->page_image) }}" alt="">
                                             </a>
                                             <div class="content">
-                                                <div class="post-date"><span class="date">July 20, 2015</span> / <a href="#" class="tag-name">Travel</a></div>
+                                                <div class="post-date">
+                                                    <span class="date">{{ $post->published_at->format('F j, Y') }}</span>
+
+                                                    @if ($post->tags->count())
+                                                        / {!! join(', ', $post->tagLinks('')) !!}
+                                                    @endif
+                                                </div>
                                                 <a href="{!! $post->olderPost($tag)->url($tag) !!}"
                                                    class="title">
                                                     Older {{ $tag ? $tag->tag : '' }} Posts
@@ -112,64 +136,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    {{-- The Post --}}{{--
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    {!! $post->content_html !!}
-                </div>
-            </div>
-        </div>
-    </article>
-
-    --}}{{-- The Pager --}}{{--
-    <div class="container">
-        <div class="row">
-            <ul class="pager">
-                @if ($tag && $tag->reverse_direction)
-                    @if ($post->olderPost($tag))
-                        <li class="previous">
-                            <a href="{!! $post->olderPost($tag)->url($tag) !!}">
-                                <i class="fa fa-long-arrow-left fa-lg"></i>
-                                Previous {{ $tag->tag }} Post
-                            </a>
-                        </li>
-                    @endif
-                    @if ($post->newerPost($tag))
-                        <li class="next">
-                            <a href="{!! $post->newerPost($tag)->url($tag) !!}">
-                                Next {{ $tag->tag }} Post
-                                <i class="fa fa-long-arrow-right"></i>
-                            </a>
-                        </li>
-                    @endif
-                @else
-                    @if ($post->newerPost($tag))
-                        <li class="previous">
-                            <a href="{!! $post->newerPost($tag)->url($tag) !!}">
-                                <i class="fa fa-long-arrow-left fa-lg"></i>
-                                Next Newer {{ $tag ? $tag->tag : '' }} Post
-                            </a>
-                        </li>
-                    @endif
-                    @if ($post->olderPost($tag))
-                        <li class="next">
-                            <a href="{!! $post->olderPost($tag)->url($tag) !!}">
-                                Next Older {{ $tag ? $tag->tag : '' }} Post
-                                <i class="fa fa-long-arrow-right"></i>
-                            </a>
-                        </li>
-                    @endif
-                @endif
-            </ul>
-        </div>
-
-    </div>--}}
 @stop

@@ -14,7 +14,9 @@
                             {{-- The Posts --}}
                             @foreach ($posts as $k => $post)
                                 <div class="blog-post style-2 @if ($k % 2 == 0) {{ '' }} @else {{ 'type-2' }} @endif ">
-                                    <a href="" class="img"><img src="{{ asset('assets/img/img35.jpg') }}" alt="" /></a>
+                                    <a href="#" class="img">
+                                        <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}" alt="" />
+                                    </a>
                                     <div class="content">
                                         <div class="post-date">
                                             {{ $post->published_at->format('F j, Y') }}

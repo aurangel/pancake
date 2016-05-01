@@ -27,6 +27,37 @@
         </div>
     </div>
     <div class="widjet">
+        <p class="title-w">
+            popular posts
+        </p>
+        <div class="popular-post">
+            <ul>
+                @foreach ($posts as $post)
+                    <li>
+                        <a class="img" href="{{ $post->url($tag) }}">
+                            <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
+                                 alt="" />
+                        </a>
+                        <div class="content">
+                            <div class="post-date">
+                                <span>
+                                    {{ $post->published_at->format('F j, Y') }}
+
+                                    @if ($post->tags->count())
+                                        / {!! join(', ', $post->tagLinks('')) !!}
+                                    @endif
+                                </span>
+                            </div>
+                            <a href="{{ $post->url($tag) }}" class="link">
+                                {{ $post->title }}
+                            </a>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+    <div class="widjet">
         <p class="title-w sm">
             popular tags
         </p>

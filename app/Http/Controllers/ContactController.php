@@ -26,7 +26,7 @@ class ContactController extends Controller
      */
     public function sendContactInfo(ContactMeRequest $request)
     {
-        $data = $request->only('name', 'email', 'phone');
+        $data = $request->only('name', 'email');
         $data['messageLines'] = explode("\n", $request->get('message'));
 
         Mail::send('emails.contact', $data, function ($message) use ($data) {
