@@ -12,8 +12,8 @@
                         <div class="simple-article-block">
                             <div class="post-date">
                                 <span class="date">{{ $post->published_at->format('F j, Y') }}</span>
-                                <a class="post-social-link" href="#"><i class="fa fa-heart-o"></i> 15 Likes</a>
-                                <a class="post-social-link" href="#"><i class="fa fa-comment-o"></i> 10 Comments</a>
+                                <a class="post-social-link" href="#"><i class="fa fa-heart-o"></i> 0 Likes</a>
+                                <a class="post-social-link" href="#"><i class="fa fa-comment-o"></i> 0 Comments</a>
                             </div>
                             <div class="article-title">
                                 <h2 class="title">

@@ -12,10 +12,10 @@
           title="RSS Feed {{ config('blog.title') }}">
 
     {{-- Fonts --}}
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700'
-          rel='stylesheet'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin,latin-ext'
-          rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
 
     {{-- Styles --}}
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">

@@ -32,7 +32,7 @@
 
 *//*--------------------------------------------------------*/
 /* 01 - FONTS */
-/*@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=latin,latin-ext);*/
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /* 02 - RESET STYLES */
@@ -102,7 +102,7 @@ body {
 /* 03 - GLOBAL SETTINGS */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lora', sans-serif;
 }
 
 /*table*/
@@ -340,7 +340,7 @@ header .nav-container {
 }
 
 .header.style-1 header .copy {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     line-height: 15px;
     font-weight: 400;
@@ -803,7 +803,7 @@ header .nav-container {
     }
 
     .header.style-4 header .copy {
-        font-family: 'Source Sans Pro';
+        font-family: 'Fira Sans';
         font-size: 11px;
         line-height: 15px;
         font-weight: 400;
@@ -1047,7 +1047,7 @@ header .nav-container {
 
 .post-social .post-social-link {
     display: inline-block;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 10px;
     line-height: 13px;
     color: #c0c0c0;
@@ -1080,7 +1080,7 @@ header .nav-container {
 
 .pagination a {
     position: relative;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
@@ -1301,7 +1301,7 @@ header .nav-container {
 }
 
 .post-grid-item.style-2 .post-cat {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     letter-spacing: 2px;
 }
 
@@ -1315,7 +1315,7 @@ header .nav-container {
 }
 
 .post-grid-item.style-3 .post-date {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
@@ -1387,7 +1387,7 @@ header .nav-container {
     -ms-transform-origin: left top;
     -o-transform-origin: left top;
     transform-origin: left top;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     font-weight: 400;
     color: #bababa;
@@ -1484,7 +1484,7 @@ header .nav-container {
 }
 
 .post-list-item .post-intro {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     line-height: 26px;
     font-weight: 400;
@@ -1581,7 +1581,7 @@ header .nav-container {
     -ms-transform-origin: left top;
     -o-transform-origin: left top;
     transform-origin: left top;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     font-weight: 400;
     color: #bababa;
@@ -1670,7 +1670,7 @@ header .nav-container {
 }
 
 .post-block-item .post-date {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     font-weight: 400;
     color: #bababa;
@@ -1697,7 +1697,7 @@ header .nav-container {
 }
 
 .post-block-item.style-2 .post-block-category {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     line-height: 15px;
     font-weight: 400;
@@ -1768,7 +1768,7 @@ header .nav-container {
 }
 
 .post-round-item .post-date {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     line-height: 16px;
     font-weight: 400;
@@ -1899,7 +1899,7 @@ header .nav-container {
 
 .main-post-slider.type-2 .date {
     margin-right: 20px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     letter-spacing: 1px;
 }
 
@@ -1920,7 +1920,7 @@ header .nav-container {
 }
 
 .main-post-slider.type-2 .description {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     line-height: 26px;
     letter-spacing: 2px;
@@ -1961,7 +1961,7 @@ header .nav-container {
 }
 
 .text-widget .text-widget-text {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     line-height: 26px;
     font-weight: 400;
@@ -2009,7 +2009,7 @@ footer .r-post:not(:last-child) {
 }
 
 .r-post .r-post-date {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     font-weight: 400;
     color: #bababa;
@@ -2110,7 +2110,7 @@ footer .r-post:not(:last-child) {
     padding: 0 15px 0 20px;
     border: 1px solid #f2f2f2;
     margin-bottom: 9px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 10px;
     letter-spacing: 2px;
     line-height: 40px;
@@ -2125,7 +2125,7 @@ footer .r-post:not(:last-child) {
     font-size: 10px;
     line-height: 36px;
     border: 1px solid #f2f2f2;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lora', sans-serif;
     -webkit-transition: all ease-out 0.3s;
     -o-transition: all ease-out 0.3s;
     -moz-transition: all ease-out 0.3s;
@@ -2143,7 +2143,7 @@ footer .r-post:not(:last-child) {
     letter-spacing: 1px;
     line-height: 26px;
     font-weight: 400;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     margin-bottom: 20px;
     margin-top: -7px;
 }
@@ -2955,7 +2955,7 @@ a, .page-left:before, .page-right:before, .cmn-toggle-switch.active span::before
 }
 
 .img-post .about {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #fff;
     font-size: 11px;
     line-height: 25px;
@@ -3000,7 +3000,7 @@ a, .page-left:before, .page-right:before, .cmn-toggle-switch.active span::before
 }
 
 .post-block-item.style-3 .post-block-category {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #c2c2c2;
     font-size: 11px;
     letter-spacing: 2px;
@@ -3018,7 +3018,7 @@ a, .page-left:before, .page-right:before, .cmn-toggle-switch.active span::before
 }
 
 .post-block-item.style-3 .description {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #c2c2c2;
     font-size: 12px;
     line-height: 26px;
@@ -3084,7 +3084,7 @@ a, .page-left:before, .page-right:before, .cmn-toggle-switch.active span::before
 
 .large-post-img .date {
     margin-right: 11px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     letter-spacing: 1px;
     font-size: 12px;
 }
@@ -3105,7 +3105,7 @@ a, .page-left:before, .page-right:before, .cmn-toggle-switch.active span::before
 }
 
 .large-post-img .description {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     line-height: 26px;
     letter-spacing: 2px;
@@ -3285,7 +3285,7 @@ a, .page-left:before, .page-right:before, .cmn-toggle-switch.active span::before
 
 .wide-post .about {
     display: block;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     font-weight: 400;
     color: #bababa;
@@ -3310,7 +3310,7 @@ a, .page-left:before, .page-right:before, .cmn-toggle-switch.active span::before
 }
 
 .wide-post .description {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #c2c2c2;
     font-size: 12px;
     line-height: 26px;
@@ -3869,7 +3869,7 @@ header.absolute {
 }
 
 .link-slider .post-date {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     margin-bottom: 8px;
     letter-spacing: 1px;
@@ -3950,7 +3950,7 @@ header.absolute {
 .big-slider .post-social {
     font-size: 11px;
     color: #fff;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     margin-bottom: 25px;
 }
 
@@ -3980,7 +3980,7 @@ header.absolute {
 }
 
 .big-slider .description {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 31px;
     font-size: 12px;
@@ -4151,8 +4151,7 @@ header.absolute {
 }
 
 .about-me .text {
-    font-family: 'Source Sans Pro';
-    font-style: italic;
+    font-family: 'Fira Sans';
     color: #bfbfbf;
     font-size: 12px;
     line-height: 26px;
@@ -4205,7 +4204,7 @@ ul {
     margin-bottom: 6px;
     color: #bfbfbf;
     font-size: 11px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     line-height: 17px;
     letter-spacing: 1px;
 }
@@ -4250,7 +4249,7 @@ ul {
     font-size: 10px;
     line-height: 7px;
     margin-right: 5px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
 }
 
 .tag:hover {
@@ -4323,7 +4322,7 @@ ul {
 }
 
 .subscribe .about {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-style: italic;
     color: #bfbfbf;
     font-size: 12px;
@@ -4344,7 +4343,7 @@ ul {
     width: 100%;
     line-height: 43px;
     padding: 0 25px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     letter-spacing: 1px;
 }
@@ -4407,7 +4406,7 @@ ul {
 }
 
 .twit-text {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #bfbfbf;
     font-style: italic;
     letter-spacing: 1px;
@@ -4425,7 +4424,7 @@ ul {
 }
 
 .twit-time {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #bfbfbf;
     font-style: italic;
     letter-spacing: 1px;
@@ -4595,7 +4594,7 @@ ul {
 .page-title .links a, .page-title .links span {
     margin-right: 12px;
     display: inline-block;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     font-style: italic;
     color: #bfbfbf;
@@ -4648,7 +4647,7 @@ ul {
 }
 
 .blog-post .post-date {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     line-height: 16px;
     font-weight: 400;
@@ -5482,7 +5481,7 @@ ul {
 .simple-article-block .post-date {
     margin-bottom: 23px;
     text-align: center;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     line-height: 16px;
     font-weight: 400;
@@ -5497,7 +5496,7 @@ ul {
 
 .simple-article-block .post-social-link {
     display: inline-block;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 10px;
     line-height: 13px;
     color: #c0c0c0;
@@ -5528,7 +5527,7 @@ ul {
 
 .article-title .description, .simple-article li {
     font-style: italic;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #bebebe;
     font-size: 12px;
     line-height: 26px;
@@ -5548,7 +5547,7 @@ ul {
 }
 
 .simple-article p, .simple-article a, .simple-article b {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #555;
     letter-spacing: 1px;
     font-size: 13px;
@@ -5599,7 +5598,7 @@ ul {
 
 .simple-article .quote {
     position: relative;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     color: #111111;
     font-style: italic;
     font-size: 20px;
@@ -5638,7 +5637,7 @@ ul {
 
 .simple-article ol li:before {
     content: counter(count-me) ". ";
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lora', sans-serif;
     font-size: 11px;
     letter-spacing: 1px;
     color: #111;
@@ -5670,7 +5669,7 @@ ul {
 
 .simple-article h1, .simple-article h2, .simple-article h3, .simple-article h4, .simple-article h5 {
     display: block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lora', sans-serif;
     color: #111;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -5752,7 +5751,7 @@ ul {
 
 .same-post .post-date {
     margin-bottom: 8px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     line-height: 16px;
     font-weight: 400;
@@ -5903,7 +5902,7 @@ ul {
     font-style: italic;
     font-size: 14px;
     line-height: 4px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     letter-spacing: 1px;
     color: #111;
     margin-bottom: 15px;
@@ -5916,7 +5915,7 @@ ul {
 
 .comment .post-date {
     margin-bottom: 15px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 11px;
     line-height: 16px;
     font-weight: 400;
@@ -5926,7 +5925,7 @@ ul {
 }
 
 .comment .text {
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     line-height: 26px;
     font-style: italic;
@@ -5940,7 +5939,7 @@ ul {
     border: 1px solid #f4f4f4;
     color: #c2c2c2;
     letter-spacing: 1px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     font-size: 12px;
     margin-bottom: 20px;
     text-align: left;
@@ -6190,7 +6189,7 @@ a:focus, a:active {
     background: #fff;
     border: 2px solid #ccc;
     color: #bebebe;
-    font-family: 'Source Sans Pro';
+    font-family: 'Fira Sans';
     text-align: left;
     height: 45px;
     width: 500px;

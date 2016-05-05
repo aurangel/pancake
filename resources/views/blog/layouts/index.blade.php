@@ -33,19 +33,21 @@
                                         @endif
                                         <div class="post-social clearfix">
                                             <span>
-                                                <a class="post-social-link soc-n" href="#">
+                                                <a class="post-social-link soc-n"
+                                                   href="http://twitter.com/share?url={{ $post->url($tag) }}&text={{ $post->title }}">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="post-social-link soc-n" href="#">
+                                                <a class="post-social-link soc-n"
+                                                   href="http://www.facebook.com/sharer.php?u={{ $post->url($tag) }}">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
                                             </span>
                                             <span>
                                                 <a class="post-social-link" href="#">
-                                                    <i class="fa fa-heart-o"></i> 15 Likes
+                                                    <i class="fa fa-heart-o"></i> 0 Likes
                                                 </a>
                                                 <a class="post-social-link" href="#">
-                                                    <i class="fa fa-comment-o"></i> 10 Comments
+                                                    <i class="fa fa-comment-o"></i> 0 Comments
                                                 </a>
                                             </span>
                                         </div>

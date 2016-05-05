@@ -5,27 +5,28 @@
                 <img src="{{ asset('assets/img/ava.jpg') }}" alt="">
             </a>
             <p class="title">about me</p>
-            <p class="text">Nam mollis ipsum non ante auctor, non dignissim augue aliquet. Nullam scelerisque elit et
-                dictum lacinia. Sed est massa, feugiat a porta eu, accumsan sit.</p>
+            <p class="text">{{ config('blog.about') }}</p>
             <div class="soc-block">
-                <a href="#">
+                <a href="{{ config('blog.social.twitter') }}">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="{{ config('blog.social.facebook') }}">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a href="#">
+                <a href="{{ config('blog.social.instagram') }}">
                     <i class="fa fa-instagram"></i>
                 </a>
-                <a href="#">
+                <a href="{{ config('blog.social.pinterest') }}">
                     <i class="fa fa-pinterest-p"></i>
                 </a>
-                <a href="#">
+                <a href="{{ config('blog.social.google') }}">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </div>
         </div>
     </div>
+
+    @if (isset($posts))
     <div class="widjet">
         <p class="title-w">
             popular posts
@@ -57,6 +58,8 @@
             </ul>
         </div>
     </div>
+    @endif
+
     <div class="widjet">
         <p class="title-w sm">
             popular tags
@@ -102,11 +105,13 @@
         <p class="title-w">
             twitter
         </p>
-        <div class="swiper-container twit-slider" data-autoplay="0" data-loop="1" data-speed="500"
-             data-center="0" data-slides-per-view="1">
+        <div class="swiper-container twit-slider"
+             data-autoplay="0"
+             data-loop="1"
+             data-speed="500"
+             data-center="0"
+             data-slides-per-view="1">
             <div class="swiper-wrapper">
-
-
                 <div class="swiper-slide">
                     <a href="#" class="author-tw">
                         <i class="fa fa-twitter"></i>

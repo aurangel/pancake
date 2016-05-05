@@ -192,7 +192,7 @@ class Post extends Model
     {
         $query = static::where('published_at', '<', $this->published_at)
             ->where('is_draft', 0)
-            ->orderBy('published_at', 'asc');
+            ->orderBy('published_at', 'desc');
 
         if ($tag) {
             $query = $query->whereHas('tags', function ($q) use ($tag) {
