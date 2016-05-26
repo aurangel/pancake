@@ -1,25 +1,25 @@
 <?php
 
 return [
-    'name' => 'My blog',
-    'title' => 'Handmade blog',
-    'subtitle' => 'A clean blog written in Laravel 5.2',
-    'about' => 'Nam mollis ipsum non ante auctor, non dignissim augue aliquet.',
-    'description' => 'This is my meta description',
-    'author' => 'Roman Vlasenko',
-    'page_image' => 'home-bg.jpg',
+    'title' => 'Блог Романа Власенко',
+    'subtitle' => 'А, добро пожаловать в моё укромное место. Здесь вы можете 
+        ознакомиться с моими мыслями, обретёте спокойствие и насладитесь 
+        современным дизайном, который ещё не видели. И вряд ли увидите.',
+    'about' => 'Меня зовут Роман, и я обожаю своё хобби - веб-ремесло. А это мой прекрасный блог.',
+    'author' => 'Роман Власенко',
     'contact_email' => 'admiralexo@gmail.com',
-    'posts_per_page' => 6,
+    'posts_per_page' => 3,
     'rss_size' => 20,
     'uploads' => [
         'storage' => 'local',
-        'webpath' => 'uploads/',
+        'webpath' => '/uploads/',
     ],
     'social' => [
-        'twitter' => '#',
-        'facebook' => '#',
-        'instagram' => '#',
-        'pinterest' => '#',
-        'google' => '#',
+        'github' => 'https://github.com/aurangel',
+        'cm' => 'https://creativemarket.com/AuraThemes',
+        'facebook' => 'https://www.facebook.com/aurathemes',
+        'vimeo' => 'https://vimeo.com/user52267802',
+        'linkedin' => 'https://ru.linkedin.com/in/rvlasenko',
+        'site' => 'http://aurathemes.ru',
     ]
 ];

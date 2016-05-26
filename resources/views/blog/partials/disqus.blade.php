@@ -1,4 +1,4 @@
-@if (App::environment() == 'production')
+@if (App::environment() != 'production')
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'handmadeblog';

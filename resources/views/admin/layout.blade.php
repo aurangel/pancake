@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('blog.title') }} Admin</title>
+    <title>{{ config('blog.title') }}</title>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{ config('blog.title') }} Admin</a>
+            <a class="navbar-brand" href="#">{{ config('blog.title') }}</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
             @include('admin.partials.navbar')

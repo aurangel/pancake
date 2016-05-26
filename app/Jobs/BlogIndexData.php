@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Tag;
 use App\Post;
+use Illuminate\Support\Facades\Cache;
 use Carbon\Carbon;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -47,7 +48,11 @@ class BlogIndexData extends Job
             ->where('published_at', '<=', Carbon::now())
             ->where('is_draft', 0)
             ->orderBy('published_at', 'desc')
-            ->simplePaginate(config('blog.posts_per_page'));
+            ->paginate(config('blog.posts_per_page'));
+
+        if (!Cache::has('posts')) {
+            Cache::put('posts', $posts, Carbon::now()->addDay());
+        }
 
         return [
             'title' => config('blog.title'),
@@ -77,7 +82,7 @@ class BlogIndexData extends Job
             })
             ->where('is_draft', 0)
             ->orderBy('published_at', $reverse_direction ? 'asc' : 'desc')
-            ->simplePaginate(config('blog.posts_per_page'));
+            ->paginate(config('blog.posts_per_page'));
         $posts->addQuery('tag', $tag->tag);
 
         $page_image = $tag->page_image ?: config('blog.page_image');

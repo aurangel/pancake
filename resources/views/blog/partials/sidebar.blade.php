@@ -1,174 +1,145 @@
 <div class="col-md-3">
-    <div class="widjet">
-        <div class="about-me">
-            <a href="#" class="ava">
-                <img src="{{ asset('assets/img/ava.jpg') }}" alt="">
-            </a>
-            <p class="title">about me</p>
-            <p class="text">{{ config('blog.about') }}</p>
-            <div class="soc-block">
-                <a href="{{ config('blog.social.twitter') }}">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="{{ config('blog.social.facebook') }}">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="{{ config('blog.social.instagram') }}">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="{{ config('blog.social.pinterest') }}">
-                    <i class="fa fa-pinterest-p"></i>
-                </a>
-                <a href="{{ config('blog.social.google') }}">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    <div class="sidebar">
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Обо мне</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-about">
+                    <img src="{{ asset('assets/images/avatar.jpg') }}" alt="">
+                    <p>{{ config('blog.about') }}</p>
+                </div><!-- /.widget-about -->
+            </div><!-- /.widget-content -->
+        </aside>
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Instagram</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-instagram">
+                    <ul id="sidebar-instafeed" class="widget-instafeed"></ul>
+                </div><!-- /.widget-instagram -->
+            </div><!-- /.widget-content -->
+        </aside>
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Категории</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-categories">
+                    <ul>
+                        <li><a href="#">Жизнь (0)</a>
+                            <ul class="child-categories">
+                                <li><a href="#">Лайфхаки (0)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Код (0)</a>
+                        </li>
+                        <li><a href="#">Креатив (2)</a></li>
+                        <li><a href="#">Бездна (7)</a></li>
+                    </ul>
+                </div>
+            </div><!-- /.widget-content -->
+        </aside>
+        @if (Cache::has('posts'))
+            <aside class="widget">
+                <div class="widget-header">
+                    <h3 class="widget-title">Недавние записи</h3>
+                </div><!-- /.widget-header -->
+                <div class="widget-content">
+                    @foreach (\Cache::get('posts') as $post)
+                        <div class="widget-recent-post">
+                            <div class="recent-post-item">
+                                <div class="post-img">
+                                    <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
+                                         alt="">
+                                </div><!-- /.post-img -->
+                                <div class="post-meta">
+                                    <h3><a href="{{ $post->url($tag) }}">{{ $post->title }}</a></h3>
+                                    <div class="date">
+                                        {{ $post->published_at->format('F j, Y') }}
+                                    </div>
+                                </div><!-- /.post-meta -->
+                            </div><!-- /.recent-post-item -->
+                        </div><!-- /.widget-recent-post -->
+                    @endforeach
+                </div><!-- /.widget-content -->
+            </aside>
+        @endif
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Архив</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-archive">
+                    <select name="archive" id="archive-select">
+                        <option value="">Выберите месяц</option>
+                        <option value="">Май (3)</option>
+                        <option value="">Июнь (1)</option>
+                    </select>
+                </div><!-- /.widget-archive -->
+            </div><!-- /.widget-content -->
+        </aside>
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Тэги</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-tag">
+                    <a href="#">магазин</a>
+                    <a href="#">код</a>
+                    <a href="#">карьера</a>
+                    <a href="#">жизнь</a>
+                    <a href="#">деньги</a>
+                    <a href="#">цель</a>
+                    <a href="#">креатив</a>
+                </div>
+            </div><!-- /.widget-content -->
+        </aside>
+        <aside class="widget">
+            <div class="widget-header">
 
-    @if (isset($posts))
-    <div class="widjet">
-        <p class="title-w">
-            popular posts
-        </p>
-        <div class="popular-post">
-            <ul>
-                @foreach ($posts as $post)
-                    <li>
-                        <a class="img" href="{{ $post->url($tag) }}">
-                            <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
-                                 alt="" />
-                        </a>
-                        <div class="content">
-                            <div class="post-date">
-                                <span>
-                                    {{ $post->published_at->format('F j, Y') }}
-
-                                    @if ($post->tags->count())
-                                        / {!! join(', ', $post->tagLinks('')) !!}
-                                    @endif
-                                </span>
-                            </div>
-                            <a href="{{ $post->url($tag) }}" class="link">
-                                {{ $post->title }}
-                            </a>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <img src="{{ asset('assets/images/ad.jpg') }}" alt="ad banner">
+            </div><!-- /.widget-content -->
+        </aside>
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Facebook</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-facebook">
+                    <div class="fb-page"
+                         data-href="https://www.facebook.com/aurathemes"
+                         data-small-header="false"
+                         data-adapt-container-width="true"
+                         data-hide-cover="false"
+                         data-show-facepile="false">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote cite="https://www.facebook.com/aurathemes">
+                                <a href="https://www.facebook.com/aurathemes">AuraThemes</a>
+                            </blockquote>
                         </div>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
-    @endif
-
-    <div class="widjet">
-        <p class="title-w sm">
-            popular tags
-        </p>
-        <div class="tag-box tags">
-            <a href="#" class="tag">
-                fashion
-            </a>
-            <a href="#" class="tag">
-                travel
-            </a>
-            <a href="#" class="tag">
-                creative
-            </a>
-            <a href="#" class="tag">
-                tech
-            </a>
-            <a href="#" class="tag">
-                modern
-            </a>
-            <a href="#" class="tag">
-                inpiration
-            </a>
-        </div>
-    </div>
-    <div class="widjet">
-        <p class="title-w sm">
-            instagram
-        </p>
-        <div class="instagram-box">
-            <a href="#"><img src="{{ asset('assets/img/i1.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i2.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i3.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i4.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i5.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i6.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i7.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i8.jpg') }}" alt=""></a>
-            <a href="#"><img src="{{ asset('assets/img/i9.jpg') }}" alt=""></a>
-        </div>
-    </div>
-    <div class="widjet">
-        <p class="title-w">
-            twitter
-        </p>
-        <div class="swiper-container twit-slider"
-             data-autoplay="0"
-             data-loop="1"
-             data-speed="500"
-             data-center="0"
-             data-slides-per-view="1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="author-tw">
-                        <i class="fa fa-twitter"></i>
-                        @ nrgblog
-                    </a>
-                    <div class="twit-text">
-                        “ Nam mollis <a href="#" class="hash">#ipsum</a> non ante auctor, non dignissim augue aliquet.
-                        Nullam scelerisque elit et dictum lacinia. Sed est massa, feugiat a porta eu, accumsan sit ”
                     </div>
-                    <div class="twit-time">
-                        5 days ago
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="#" class="author-tw">
-                        <i class="fa fa-twitter"></i>
-                        @ nrgblog
-                    </a>
-                    <div class="twit-text">
-                        “ Nam mollis <a href="#" class="hash">#ipsum</a> non ante auctor, non dignissim augue aliquet.
-                        Nullam scelerisque elit et dictum lacinia. Sed est massa, feugiat a porta eu, accumsan sit ”
-                    </div>
-                    <div class="twit-time">
-                        5 days ago
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="#" class="author-tw">
-                        <i class="fa fa-twitter"></i>
-                        @ nrgblog
-                    </a>
-                    <div class="twit-text">
-                        “ Nam mollis <a href="#" class="hash">#ipsum</a> non ante auctor, non dignissim augue aliquet.
-                        Nullam scelerisque elit et dictum lacinia. Sed est massa, feugiat a porta eu, accumsan sit ”
-                    </div>
-                    <div class="twit-time">
-                        5 days ago
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="#" class="author-tw">
-                        <i class="fa fa-twitter"></i>
-                        @ nrgblog
-                    </a>
-                    <div class="twit-text">
-                        “ Nam mollis <a href="#" class="hash">#ipsum</a> non ante auctor, non dignissim augue aliquet.
-                        Nullam scelerisque elit et dictum lacinia. Sed est massa, feugiat a porta eu, accumsan sit ”
-                    </div>
-                    <div class="twit-time">
-                        5 days ago
-                    </div>
-                </div>
-            </div>
-            <div class="pagination style-2"></div>
-        </div>
-    </div>
-</div>
+                </div><!-- /.widget-facebook -->
+            </div><!-- /.widget-content -->
+        </aside>
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Подписка</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-subscribe">
+                    <p>Здесь вы можете подписаться, чтобы получать самые последние обновления</p>
+                    <form action="#" method="get">
+                        <input type="text" id="subscribe-name" name="name" placeholder="Ваше имя" required="">
+                        <input type="email" id="subscribe-email" name="email" placeholder="Ваш e-mail..." required="">
+                        <input class="tg-btn" type="submit" value="Готово">
+                    </form>
+                </div> <!-- ./widget-subscribe -->
+                <!-- /.widget-subscribe -->
+            </div><!-- /.widget-content -->
+        </aside>
+    </div><!-- /.sidebar -->
+</div><!-- /.col-md-3 -->

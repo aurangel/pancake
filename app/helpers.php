@@ -37,7 +37,7 @@ function pageImage($value = null)
     }
 
     if (!starts_with($value, 'http') && $value[0] !== '/') {
-        $value = config('blog.uploads.webpath') . '/' . $value;
+        $value = config('blog.uploads.webpath') . $value;
     }
 
     return $value;

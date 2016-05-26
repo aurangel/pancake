@@ -40,7 +40,7 @@
                                     }
                                 }
                                 if (value.substr(0, 4) != 'http' && value.substr(0, 1) != '/') {
-                                    value = {!! json_encode(config('blog.uploads.webpath')) !!} + '/' + value;
+                                    value = {!! json_encode(config('blog.uploads.webpath')) !!} + value;
                                 }
                                 return value;
                             });
@@ -49,7 +49,7 @@
                     <div class="visible-sm space-10"></div>
                     <div class="col-md-4 text-right">
                         <img src="{{ pageImage($page_image) }}" class="img img_responsive"
-                             id="page-image-preview" style="max-height:40px">
+                             id="page-image-preview" style="max-height: 130px">
                     </div>
                 </div>
             </div>
