@@ -17,7 +17,7 @@
                                                      alt="">
                                             </div><!-- /.post-img -->
                                             <div class="post-meta">
-                                                <h3><a href="{{ $post->url($tag) }}">{{ $post->title }}</a></h3>
+                                                <h3><a href="{{ $post->url() }}">{{ $post->title }}</a></h3>
                                                 <div class="date">
                                                     {{ $post->published_at->format('F j, Y') }}
                                                 </div>
@@ -61,8 +61,8 @@
     </div><!-- /.footer-widget -->
     <div class="footer-menu">
         <ul>
-            <li><a href="about">Кто я такой</a></li>
-            <li><a href="contact">Связаться со мной</a></li>
+            <li><a href="/about">Кто я такой</a></li>
+            <li><a href="/contact">Напиши мне</a></li>
         </ul>
     </div><!-- /.footer-menu -->
 </footer>

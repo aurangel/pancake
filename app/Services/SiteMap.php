@@ -36,7 +36,7 @@ class SiteMap
         $dates = array_keys($postsInfo);
         sort($dates);
         $lastmod = last($dates);
-        $url = trim(url(), '/') . '/';
+        $url = str_finish(url(), '/');
 
         $xml = [];
         $xml[] = '<?xml version="1.0" encoding="UTF-8"?' . '>';

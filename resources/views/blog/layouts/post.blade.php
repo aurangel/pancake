@@ -122,19 +122,19 @@
                 </div> <!-- /.col-md-3 -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat2.jpg') }}" alt="Post Category">
+                        <img src="{{ asset('assets/images/categories/cat4.jpg') }}" alt="Post Category">
                         <a href="#">Код</a>
                     </div><!-- /.category-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat3.jpg') }}" alt="Post Category">
-                        <a href="#">Креатив</a>
+                        <img src="{{ asset('assets/images/categories/cat2.jpg') }}" alt="Post Category">
+                        <a href="#">Магазин</a>
                     </div><!-- /.category-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat4.jpg') }}" alt="Post Category">
+                        <img src="{{ asset('assets/images/categories/cat3.jpg') }}" alt="Post Category">
                         <a href="#">Бездна</a>
                     </div><!-- /.category-item -->
                 </div> <!-- /.col-md-3 -->

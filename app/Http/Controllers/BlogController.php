@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\BlogIndexData;
 use App\Http\Requests;
+use App\Jobs\BlogIndexData;
+use App\Jobs\BlogSearchData;
 use App\Post;
-use App\Tag;
-use App\Services\SiteMap;
 use App\Services\RssFeed;
+use App\Services\SiteMap;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -19,6 +20,14 @@ class BlogController extends Controller
         $layout = $tag ? Tag::layout($tag) : 'blog.layouts.index';
 
         return view($layout, $data);
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->get('s');
+        $data = $this->dispatch(new BlogSearchData($query));
+
+        return view('blog.layouts.index', $data);
     }
 
     public function showPost($slug, Request $request)

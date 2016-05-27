@@ -18,11 +18,11 @@
                         <div class="navbar-collapse collapse">
                             <!-- Right nav -->
                             <ul class="nav navbar-nav">
-                                <li><a href="/blog">Главная</a></li>
-                                <li><a href="#">Код</a></li>
-                                <li><a href="#">Жизнь</a></li>
-                                <li><a href="#">Креатив</a></li>
-                                <li><a href="#">Бездна</a></li>
+                                <li><a href="/">Главная</a></li>
+                                <li><a href="sitemap.xml">Карта блога</a></li>
+                                <li><a href="rss.xml">RSS лента</a></li>
+                                <li><a href="/contact">Контакты</a></li>
+                                <li><a href="/about">От автора</a></li>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div>
@@ -47,18 +47,18 @@
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.github') }}" title="Личный git репозиторий" target="_blank">
+                            <a href="{{ config('blog.social.github') }}" title="Мой личный git репозиторий" target="_blank">
                                 <i class="fa fa-github-alt"></i>
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.linkedin') }}" title="Просто профиль.." target="_blank">
-                                <i class="fa fa-linkedin"></i>
+                            <a href="{{ config('blog.social.vimeo') }}" title="Презентации некоторых товаров" target="_blank">
+                                <i class="fa fa-vimeo"></i>
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.vimeo') }}" title="Просто профиль" target="_blank">
-                                <i class="fa fa-vimeo"></i>
+                            <a href="{{ config('blog.social.linkedin') }}" title="Просто профиль" target="_blank">
+                                <i class="fa fa-linkedin"></i>
                             </a>
                         </li>
                     </ul>
@@ -66,10 +66,10 @@
             </div> <!-- /.col-md-2 -->
             <div class="col-xs-12 col-md-12 col-lg-2">
                 <div class="header-search">
-                    <form role="search" method="get" class="search-form" action="#">
+                    <form role="search" method="get" class="search-form" action="search">
                         <label for="search"></label>
-                        <input type="text" class="search-box" id="search" name="s">
-                        <button type="button" class="search-btn"><i class="fa fa-search"></i></button>
+                        <input type="text" class="search-box" id="search" name="s" value="{{ old('s') }}" />
+                        <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                     </form> <!-- end form -->
                 </div> <!-- /.header-search-box -->
             </div> <!-- /.col-md-2 -->

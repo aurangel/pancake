@@ -20,6 +20,6 @@ return [
         'facebook' => 'https://www.facebook.com/aurathemes',
         'vimeo' => 'https://vimeo.com/user52267802',
         'linkedin' => 'https://ru.linkedin.com/in/rvlasenko',
-        'site' => 'http://aurathemes.ru',
+        'site' => 'https://aurathemes.ru',
     ]
 ];

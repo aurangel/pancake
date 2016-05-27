@@ -1,5 +1,6 @@
 @extends('blog.layouts.master', ['meta_description' => 'Contact Form'])
 
+{{--
 @section('content')
     <div id="content-wrapper">
         <div class="container">
@@ -82,4 +83,53 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection--}}
+
+@section('content')
+<section id="contact" class="contact">
+    <div class="container">
+        <img src="{{ asset('assets/images/contact.jpg') }}" alt="Contact">
+        <div class="row">
+            <div class="col-md-5">
+                <p>Хотите связаться со мной, чтобы пожелать добра? Заполните форму справа,
+                    отправьте сообщение, и я постараюсь ответить Вам в течение 24 часов.</p>
+            </div><!-- /.col-md-5 -->
+            <div class="col-md-7">
+                <div class="contact-form">
+                    <form action="/contact" method="post" id="commentform" class="form">
+                        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input id="author" class="field text" placeholder="Имя"
+                                       name="name"
+                                       type="text"
+                                       value="{{ old('name') }}"
+                                       required="" />
+                            </div><!-- /.col-md-6 -->
+                            <div class="col-md-6">
+                                <input id="email" class="field text" placeholder="Email"
+                                       name="email"
+                                       type="text"
+                                       value="{{ old('email') }}"
+                                       required="" />
+                            </div><!-- /.col-md-12 -->
+                            <div class="col-md-12">
+                                <textarea id="comment" class="field textarea" rows="4"
+                                          placeholder="Сообщение"
+                                          name="message"
+                                          required="">{{ old('message') }}</textarea>
+                            </div><!-- /.col-md-12 -->
+                            <div class="col-md-12 form-submit">
+                                <input name="submit" type="submit" id="submit"
+                                       class="submit"
+                                       value="Отправить" />
+                            </div><!-- /.form-submit -->
+                        </div><!-- /.row -->
+                    </form>
+                </div><!-- /.contact-form -->
+            </div><!-- /.col-md-7 -->
+        </div><!-- /.row -->
+        <!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /#contact -->
+@stop

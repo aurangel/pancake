@@ -16,11 +16,12 @@ Route::get('/', function () {
     return redirect('/blog');
 });
 Route::get('blog', 'BlogController@index');
+Route::get('search', 'BlogController@search');
 Route::get('blog/{slug}', 'BlogController@showPost');
 Route::get('contact', 'ContactController@showForm');
 Route::post('contact', 'ContactController@sendContactInfo');
 Route::get('about', 'BlogController@showAbout');
-Route::get('rss', 'BlogController@rss');
+Route::get('rss.xml', 'BlogController@rss');
 Route::get('sitemap.xml', 'BlogController@siteMap');
 
 // Admin area

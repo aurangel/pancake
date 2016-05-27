@@ -86,7 +86,7 @@
             </div><!-- /.widget-header -->
             <div class="widget-content">
                 <div class="widget-tag">
-                    <a href="#">магазин</a>
+                    <a href="/blog?tag=магазин">магазин</a>
                     <a href="#">код</a>
                     <a href="#">карьера</a>
                     <a href="#">жизнь</a>

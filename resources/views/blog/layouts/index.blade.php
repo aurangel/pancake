@@ -10,7 +10,10 @@
 
                             <article class="post-item">
                                 <div class="thumb-img">
-                                    <a href="#"><img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}" alt="Post Thumbnail"></a>
+                                    <a href="#">
+                                        <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
+                                             alt="Post Thumbnail" />
+                                    </a>
                                 </div><!-- /.thumb-img -->
                                 <div class="post-header">
                                     <div class="post-categoris">
@@ -28,7 +31,10 @@
                                     @if ($post->subtitle)
                                         <p>{{ $post->subtitle }}</p>
                                     @endif
-                                    <p class="read-more"><a href="{{ $post->url($tag) }}" class="button hvr-underline-from-center">Продолжить чтение...</a></p>
+                                    <p class="read-more">
+                                        <a href="{{ $post->url($tag) }}"
+                                           class="button hvr-underline-from-center">Продолжить чтение...</a>
+                                    </p>
                                 </div><!-- /.post-content -->
                                 <div class="post-footer">
                                     <div class="row">
@@ -62,12 +68,14 @@
 
                         <div class="post-pagination">
                             <div class="row">
-                                {{--@if ($posts->currentPage() > 1)--}}
-                                    <div class="col-xs-6 col-sm-4 prev-post">
+                                    <div class="col-xs-6 col-sm-4 prev-post"
+                                         @if ($posts->currentPage() <= 1)
+                                            style="visibility: hidden;"
+                                         @endif
+                                    >
                                         <a href="{!! $posts->url($posts->currentPage() - 1) !!}"
                                            class="newer-post">Newer {{ $tag ? $tag->tag : '' }} Posts</a>
                                     </div> <!-- /.col-sm-4 -->
-                                {{--@endif--}}
                                 <div class="col-xs-6 col-sm-4 pagination-list hidden-xs">
                                     <span>
                                         {!! with(new \App\Pagination($posts))->render() !!}
@@ -99,19 +107,19 @@
                 </div> <!-- /.col-md-3 -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat2.jpg') }}" alt="Post Category">
+                        <img src="{{ asset('assets/images/categories/cat4.jpg') }}" alt="Post Category">
                         <a href="#">Код</a>
                     </div><!-- /.category-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat3.jpg') }}" alt="Post Category">
-                        <a href="#">Креатив</a>
+                        <img src="{{ asset('assets/images/categories/cat2.jpg') }}" alt="Post Category">
+                        <a href="#">Магазин</a>
                     </div><!-- /.category-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat4.jpg') }}" alt="Post Category">
+                        <img src="{{ asset('assets/images/categories/cat3.jpg') }}" alt="Post Category">
                         <a href="#">Бездна</a>
                     </div><!-- /.category-item -->
                 </div> <!-- /.col-md-3 -->

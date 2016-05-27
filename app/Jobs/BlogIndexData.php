@@ -26,7 +26,7 @@ class BlogIndexData extends Job
     /**
      * Execute the job.
      *
-     * @return void
+     * @return array
      */
     public function handle()
     {
@@ -58,7 +58,6 @@ class BlogIndexData extends Job
             'title' => config('blog.title'),
             'subtitle' => config('blog.subtitle'),
             'posts' => $posts,
-            'page_image' => config('blog.page_image'),
             'meta_description' => config('blog.description'),
             'reverse_direction' => false,
             'tag' => null,
