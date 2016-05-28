@@ -66,9 +66,13 @@
             </div> <!-- /.col-md-2 -->
             <div class="col-xs-12 col-md-12 col-lg-2">
                 <div class="header-search">
-                    <form role="search" method="get" class="search-form" action="search">
+                    <form role="search" method="get" class="search-form" action="/blog/search">
                         <label for="search"></label>
-                        <input type="text" class="search-box" id="search" name="s" value="{{ old('s') }}" />
+                        <input type="text" class="search-box"
+                               id="search"
+                               name="s"
+                               value="{{ old('s') }}"
+                               required="" />
                         <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                     </form> <!-- end form -->
                 </div> <!-- /.header-search-box -->

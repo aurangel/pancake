@@ -16,7 +16,7 @@ Route::get('/', function () {
     return redirect('/blog');
 });
 Route::get('blog', 'BlogController@index');
-Route::get('search', 'BlogController@search');
+Route::get('blog/search', 'BlogController@search');
 Route::get('blog/{slug}', 'BlogController@showPost');
 Route::get('contact', 'ContactController@showForm');
 Route::post('contact', 'ContactController@sendContactInfo');

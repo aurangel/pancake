@@ -14,7 +14,7 @@ class BlogSearchData extends Job
     /**
      * Create a new job instance.
      *
-     * @return void
+     * @param $query
      */
     public function __construct($query)
     {

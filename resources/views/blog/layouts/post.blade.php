@@ -49,10 +49,10 @@
                                                     <a href="http://twitter.com/share?url={{ $post->url($tag) }}&text={{ $post->title }}"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                                 <li class="post-social-list-item">
-                                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                                    <a href="https://pinterest.com/pin/create/button/?url=&media={{ $post->page_image }}&description={{ $post->title }}"><i class="fa fa-pinterest"></i></a>
                                                 </li>
                                                 <li class="post-social-list-item">
-                                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                                    <a href="https://plus.google.com/share?url={{ $post->url($tag) }}"><i class="fa fa-google-plus"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -71,35 +71,48 @@
                             </div><!-- /.author-bio -->
                         </div><!-- /.author-box -->
                         <div class="related-post">
-                            <h3 class="title">Похожие записи</h3>
+                            <h3 class="title">Вам также понравится</h3>
                             <div class="row">
-                                <div class="col-xs-6 col-sm-4">
-                                    <div class="related-post-item">
-                                        <a href="#"><img src="{{ asset('assets/images/post/post1.jpg') }}" alt="Post Thumbnail"></a>
-                                        <h3><a href="#">My detox smoothie</a></h3>
-                                        <div class="date">
-                                            October 20, 2015
-                                        </div>
-                                    </div><!-- /.related-post-item -->
-                                </div><!-- /.col-sm-6 col-md-4 -->
-                                <div class="col-xs-6 col-sm-4">
-                                    <div class="related-post-item">
-                                        <a href="#"><img src="{{ asset('assets/images/post/post2.jpg') }}" alt="Post Thumbnail"></a>
-                                        <h3><a href="#">Far far away, behind the word mountains</a></h3>
-                                        <div class="date">
-                                            October 20, 2015
-                                        </div>
-                                    </div><!-- /.related-post-item -->
-                                </div><!-- /.col-sm-6 col-md-4 -->
-                                <div class="col-xs-6 col-sm-4">
-                                    <div class="related-post-item">
-                                        <a href="#"><img src="{{ asset('assets/images/post/post5.jpg') }}" alt="Post Thumbnail"></a>
-                                        <h3><a href="#">My detox smoothie</a></h3>
-                                        <div class="date">
-                                            October 20, 2015
-                                        </div>
-                                    </div><!-- /.related-post-item -->
-                                </div><!-- /.col-sm-6 col-md-4 -->
+                                @if ($post->newerPost($tag))
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="related-post-item">
+                                            <a href="{!! $post->newerPost($tag)->url($tag) !!}">
+                                                <img src="{{ pageImage($post->newerPost($tag)->page_image) }}"
+                                                     alt="Post Thumbnail" />
+                                            </a>
+                                            <h3><a href="{!! $post->newerPost($tag)->url($tag) !!}">{{ $post->newerPost($tag)->title }}</a></h3>
+                                            <div class="date">
+                                                {{ $post->published_at->format('F j, Y') }}
+                                            </div>
+                                        </div><!-- /.related-post-item -->
+                                    </div><!-- /.col-sm-6 col-md-4 -->
+                                @endif
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="related-post-item">
+                                            <a href="{!! $post->url($tag) !!}">
+                                                <img src="{{ pageImage($post->page_image) }}"
+                                                     alt="Post Thumbnail" />
+                                            </a>
+                                            <h3><a href="{!! $post->url($tag) !!}">{{ $post->title }}</a></h3>
+                                            <div class="date">
+                                                {{ $post->published_at->format('F j, Y') }}
+                                            </div>
+                                        </div><!-- /.related-post-item -->
+                                    </div><!-- /.col-sm-6 col-md-4 -->
+                                @if ($post->olderPost($tag))
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="related-post-item">
+                                            <a href="{!! $post->olderPost($tag)->url($tag) !!}">
+                                                <img src="{{ pageImage($post->olderPost($tag)->page_image) }}"
+                                                     alt="Post Thumbnail" />
+                                            </a>
+                                            <h3><a href="{!! $post->olderPost($tag)->url($tag) !!}">{{ $post->olderPost($tag)->title }}</a></h3>
+                                            <div class="date">
+                                                {{ $post->published_at->format('F j, Y') }}
+                                            </div>
+                                        </div><!-- /.related-post-item -->
+                                    </div><!-- /.col-sm-6 col-md-4 -->
+                                @endif
                             </div><!-- /.row -->
                         </div><!-- /.related-post -->
                         <div class="write-a-comment">

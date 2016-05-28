@@ -10,7 +10,7 @@
 
                             <article class="post-item">
                                 <div class="thumb-img">
-                                    <a href="#">
+                                    <a href="{{ $post->url($tag) }}">
                                         <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
                                              alt="Post Thumbnail" />
                                     </a>
@@ -53,10 +53,10 @@
                                                         <a href="http://twitter.com/share?url={{ $post->url($tag) }}&text={{ $post->title }}"><i class="fa fa-twitter"></i></a>
                                                     </li>
                                                     <li class="post-social-list-item">
-                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                                        <a href="https://pinterest.com/pin/create/button/?url=&media={{ 'http://localhost:8000' . pageImage($post->page_image) }}&description={{ $post->title }}"><i class="fa fa-pinterest"></i></a>
                                                     </li>
                                                     <li class="post-social-list-item">
-                                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                                        <a href="https://plus.google.com/share?url={{ $post->url($tag) }}"><i class="fa fa-google-plus"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
