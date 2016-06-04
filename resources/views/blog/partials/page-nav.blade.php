@@ -20,7 +20,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="/">Главная</a></li>
                                 <li><a href="sitemap.xml">Карта блога</a></li>
-                                <li><a href="rss.xml">RSS лента</a></li>
+                                <li><a href="rss">RSS лента</a></li>
                                 <li><a href="/contact">Контакты</a></li>
                                 <li><a href="/about">От автора</a></li>
                             </ul>

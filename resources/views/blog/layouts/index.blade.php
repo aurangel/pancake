@@ -7,12 +7,11 @@
                 <div class="col-md-9">
                     <div class="content-area">
                         @foreach ($posts as $k => $post)
-
                             <article class="post-item">
                                 <div class="thumb-img">
                                     <a href="{{ $post->url($tag) }}">
                                         <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
-                                             alt="Post Thumbnail" />
+                                             alt="Post Thumbnail"/>
                                     </a>
                                 </div><!-- /.thumb-img -->
                                 <div class="post-header">

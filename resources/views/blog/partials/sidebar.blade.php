@@ -11,36 +11,6 @@
                 </div><!-- /.widget-about -->
             </div><!-- /.widget-content -->
         </aside>
-        <aside class="widget">
-            <div class="widget-header">
-                <h3 class="widget-title">Instagram</h3>
-            </div><!-- /.widget-header -->
-            <div class="widget-content">
-                <div class="widget-instagram">
-                    <ul id="sidebar-instafeed" class="widget-instafeed"></ul>
-                </div><!-- /.widget-instagram -->
-            </div><!-- /.widget-content -->
-        </aside>
-        <aside class="widget">
-            <div class="widget-header">
-                <h3 class="widget-title">Категории</h3>
-            </div><!-- /.widget-header -->
-            <div class="widget-content">
-                <div class="widget-categories">
-                    <ul>
-                        <li><a href="#">Жизнь (0)</a>
-                            <ul class="child-categories">
-                                <li><a href="#">Лайфхаки (0)</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Код (0)</a>
-                        </li>
-                        <li><a href="#">Креатив (2)</a></li>
-                        <li><a href="#">Бездна (7)</a></li>
-                    </ul>
-                </div>
-            </div><!-- /.widget-content -->
-        </aside>
         @if (Cache::has('posts'))
             <aside class="widget">
                 <div class="widget-header">
@@ -66,6 +36,25 @@
                 </div><!-- /.widget-content -->
             </aside>
         @endif
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Категории</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-categories">
+                    <ul>
+                        <li><a href="#">Жизнь (0)</a>
+                            <ul class="child-categories">
+                                <li><a href="#">Лайфхаки (0)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Код (0)</a></li>
+                        <li><a href="#">Креатив (2)</a></li>
+                        <li><a href="#">Бездна (7)</a></li>
+                    </ul>
+                </div>
+            </div><!-- /.widget-content -->
+        </aside>
         <aside class="widget">
             <div class="widget-header">
                 <h3 class="widget-title">Архив</h3>
@@ -115,7 +104,8 @@
                          data-small-header="false"
                          data-adapt-container-width="true"
                          data-hide-cover="false"
-                         data-show-facepile="false">
+                         data-show-posts="true"
+                         data-show-facepile="true">
                         <div class="fb-xfbml-parse-ignore">
                             <blockquote cite="https://www.facebook.com/aurathemes">
                                 <a href="https://www.facebook.com/aurathemes">AuraThemes</a>
