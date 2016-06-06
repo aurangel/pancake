@@ -66,7 +66,7 @@
                             </div><!-- /.author-avatar -->
                             <div class="author-bio">
                                 <h3><a href="#">{{ config('blog.author') }}</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                                <p>Привет! Меня зовут Роман. В моем блоге вы можете почитать мои мысли, обрести спокойствие и насладиться современным дизайном, который ещё не видели. И вряд ли увидите.</p>
                                 <p class="email"><a href="mailto:admiralexo@gmail.com">admiralexo@gmail.com</a></p>
                             </div><!-- /.author-bio -->
                         </div><!-- /.author-box -->

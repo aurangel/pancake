@@ -48,7 +48,7 @@
                         </div><!-- /.widget-header -->
                         <div class="widget-content">
                             <div class="footer-widget-video">
-                                <p>Иногда здесь появляются вдохновляющие видеоролики.</p>
+                                <p>Иногда здесь появляются вдохновляющие видеоролики</p>
                                 <a class="mfp-youtube" href="https://www.youtube.com/watch?v=mcixldqDIEQ">
                                     <img src="{{ asset('assets/images/video.jpg') }}" alt="Click to Watch the Video">
                                 </a>

@@ -18,5 +18,6 @@ return [
         'vimeo' => 'https://vimeo.com/user52267802',
         'linkedin' => 'https://ru.linkedin.com/in/rvlasenko',
         'site' => 'https://aurathemes.ru',
+        'personal' => 'https://rvlasenko.ru',
     ]
 ];

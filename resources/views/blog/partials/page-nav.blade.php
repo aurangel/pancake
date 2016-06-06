@@ -32,6 +32,11 @@
                 <div class="header-social">
                     <ul class="header-social-list list-inline">
                         <li class="header-social-list-item">
+                            <a href="{{ config('blog.social.personal') }}" title="Личный уголок в этой паутине" target="_blank">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </li>
+                        <li class="header-social-list-item">
                             <a href="{{ config('blog.social.site') }}" title="Сайт моей команды" target="_blank">
                                 <i class="fa fa-globe"></i>
                             </a>
@@ -47,7 +52,7 @@
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.github') }}" title="Мой личный git репозиторий" target="_blank">
+                            <a href="{{ config('blog.social.github') }}" title="Мой git репозиторий" target="_blank">
                                 <i class="fa fa-github-alt"></i>
                             </a>
                         </li>
@@ -57,7 +62,7 @@
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.linkedin') }}" title="Просто профиль" target="_blank">
+                            <a href="{{ config('blog.social.linkedin') }}" title="На самом деле просто профиль" target="_blank">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </li>
