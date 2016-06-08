@@ -33,11 +33,6 @@
                     <ul class="header-social-list list-inline">
                         <li class="header-social-list-item">
                             <a href="{{ config('blog.social.personal') }}" title="Личный уголок в этой паутине" target="_blank">
-                                <i class="fa fa-user"></i>
-                            </a>
-                        </li>
-                        <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.site') }}" title="Сайт моей команды (ныне неактуален)" target="_blank">
                                 <i class="fa fa-globe"></i>
                             </a>
                         </li>

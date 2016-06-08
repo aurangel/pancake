@@ -63,6 +63,7 @@
         <ul>
             <li><a href="/about">Кто я такой</a></li>
             <li><a href="/contact">Напиши мне</a></li>
+            <li><a href="humans.txt">humans.txt</a></li>
         </ul>
     </div><!-- /.footer-menu -->
 </footer>

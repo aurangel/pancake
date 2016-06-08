@@ -43,11 +43,7 @@
             <div class="widget-content">
                 <div class="widget-categories">
                     <ul>
-                        <li><a href="#">Жизнь (0)</a>
-                            <ul class="child-categories">
-                                <li><a href="#">Лайфхаки (0)</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">Жизнь (0)</a></li>
                         <li><a href="#">Код (0)</a></li>
                         <li><a href="#">Креатив (2)</a></li>
                         <li><a href="#">Бездна (7)</a></li>
@@ -75,13 +71,13 @@
             </div><!-- /.widget-header -->
             <div class="widget-content">
                 <div class="widget-tag">
-                    <a href="/blog?tag=магазин">магазин</a>
+                    <a href="#">площадка</a>
                     <a href="#">код</a>
                     <a href="#">карьера</a>
                     <a href="#">жизнь</a>
                     <a href="#">деньги</a>
                     <a href="#">цель</a>
-                    <a href="#">креатив</a>
+                    <a href="#">что-то</a>
                 </div>
             </div><!-- /.widget-content -->
         </aside>

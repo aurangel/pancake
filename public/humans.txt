@@ -1,0 +1,13 @@
+/* TEAM */
+
+Chef: Roman Vlasenko
+Contact: admiralexo [at] gmail.com
+Location: Alatyr, Russia
+
+/* SITE */
+
+Last update: 2016/06/08
+Standards: HTML5, CSS3.
+Components: Modernizr, jQuery, Bootstrap, Laravel.
+Software: Google Chrome
+IDE: Sublime Text, PHPStorm
