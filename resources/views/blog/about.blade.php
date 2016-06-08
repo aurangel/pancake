@@ -1,11 +1,36 @@
-@extends('blog.layouts.master', ['meta_description' => 'About Me'])
+@extends('blog.layouts.master', ['meta_description' => 'Обо мне'])
 
 @section('content')
     <section id="about" class="about">
         <div class="container">
-            <img src="{{ asset('assets/images/about.jpg') }}" alt="About Me">
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+            <img src="{{ asset('assets/images/about.jpg') }}" alt="About Me" />
+            Привет, странник. Ты находишься на страницах моего персонального блога. Здесь я
+            постараюсь изложить некоторые аспекты моей биографии, которые, может быть тебя заинтересуют (раз уж ты заглянул сюда),
+            и мы с тобой познакомимся поближе. Вероятно ты уже знаешь, как меня зовут, если тебе довелось почитать
+            некоторые мои посты. На каждом из них, слева, под фотографией, всегда находится небольшая сноска о авторе.
+            Кстати, мне 19, я фанат самообразования, технологий и продуктивности (GTD). <strike>Agile не для нас.</strike>
+            <br/><br/>
+            Но если взять глубже? Я такой же обычный человек, как и ты, просто посвящаю себя своему делу чуть более, чем полностью.
+            Оно, помимо удовольствия, доставляет мне прибыль (ну по крайней мере раньше). Если заинтересует, то
+            покликай по ссылкам в заголовке блога (кстати, там есть <strong>всплывающие подсказки!</strong>). Я долго работал на фрилансе,
+            разрабатывая HTML шаблоны и темы для WordPress. Надо отметить, что я даже основал небольшую команду состоящую
+            целиком из иностранцев и руководил ими. Это было просто, хотя...
+            Сейчас с нашим магазином происходят странные неполадки, из-за предупреждения, но это уже другая история.
+            <br/><br/>
+            Этот блог послужит для меня пристанищем, где я буду выражать свои огромные мысли о чем-либо, писать о своём
+            прошлом опыте работы на микростоках, и о настоящем, где я коснусь более профессиональной тематики и тому подобное.
+            <br/><br/>
+            <strong>Немного личных качеств не помешает?</strong> <br/>
+            <ul class="orig">
+                <li>Я люблю размышлять над событиями, проникать в суть явлений и самостоятельно решать сложные проблемы, успевая к дедлайну.</li>
+                <li>Стремлюсь к успеху в работе, достигаю своих целей, спокойно преодолеваю трудности, и результаты своего
+                    труда оцениваю как шаг к успеху.</li>
+                <li>Внутри себя я склонен к путешествиям, загадкам и тайнам, люблю исследовать и неизведанное в целом.</li>
+                <li>Не последнюю роль для меня играет эстетика и соцерзание прекрасного и возвышенного.</li>
+                <li>Что ещё можно сказать? Люблю подняться в глазах окружающих, хотя, обычно, те кого я знаю, об этом не говорят.</li>
+            </ul>
+            <br/><br/>
+            Как-то так, мой друг. Прошу прощения, что вышло немного пафосно.
         </div><!-- /.container -->
     </section><!-- /#about -->
 @stop

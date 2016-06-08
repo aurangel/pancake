@@ -37,12 +37,12 @@
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.site') }}" title="Сайт моей команды" target="_blank">
+                            <a href="{{ config('blog.social.site') }}" title="Сайт моей команды (ныне неактуален)" target="_blank">
                                 <i class="fa fa-globe"></i>
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.cm') }}" title="Наша площадка для продаж" target="_blank">
+                            <a href="{{ config('blog.social.cm') }}" title="Наша бывшая площадка для продаж" target="_blank">
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
                         </li>
