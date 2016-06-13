@@ -1,12 +1,6 @@
 ## Введение
 
-Pancake это мой личный блог написанный на Laravel 5.2. Надеюсь, никому не придет в голову посылать сюда pull-request.
-
-## Скриншоты
-
-### Страница с обычным постом
-
-![](http://aurathemes.ru/single-post.png)
+Pancake это мой личный блог написанный на Laravel 5.2 и PJAX. Надеюсь, никому не придет в голову посылать сюда pull-request :)
 
 ### Административная панель
 
@@ -15,13 +9,14 @@ Pancake это мой личный блог написанный на Laravel 5.
 ## Библиотеки
 
 * [amsul/pickadate](https://github.com/amsul/pickadate.js);
+* [luruke/barba.js](https://github.com/luruke/barba.js);
 * [selectize/selectize](https://github.com/selectize/selectize.js);
 * [OwlFonk/OwlCarousel](https://github.com/OwlFonk/OwlCarousel);
 * [metafizzy/isotope](https://github.com/metafizzy/isotope);
 
 ## В планах
 
-* php test;
+* php тестирование;
 
 ## Особенности
 

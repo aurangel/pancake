@@ -1,31 +1,42 @@
 !function (e) {
     "use strict";
+    
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+        if (document.getElementById("disqus_thread")) {
+            var disqus_shortname = 'handmadeblog'
+            var disqus_identifier = 'blog-' + Barba.Pjax.getCurrentUrl()
+            var disqus_url = Barba.Pjax.getCurrentUrl()
+            var disqus_script = 'embed.js'
+
+            // here we will only load the disqus <script> if not already loaded
+            if (!window.DISQUS) {
+                (function(d,s) {
+                    s = d.createElement('script');
+                    s.async=1;s.src = '//' + disqus_shortname + '.disqus.com/'+disqus_script;
+                    (d.getElementsByTagName('head')[0]).appendChild(s);
+                })(document)
+            }
+            // if disqus <script> already loaded, we just reset disqus the right way
+            // see http://help.disqus.com/customer/portal/articles/472107-using-disqus-on-ajax-sites
+            else {
+                setTimeout(function() {
+                    DISQUS.reset({
+                        reload: true,
+                        config: function () {
+                            this.page.identifier = disqus_identifier
+                            this.page.url = disqus_url
+                        }
+                    })
+                }, 2000);
+            }
+        }
+    });
+
     e(".dropdown a.dropdown-toggle").on("click", function (o) {
         e(this).next("ul").toggle(), o.stopPropagation(), o.preventDefault()
     }), SmoothScroll({stepSize: 80});
     var o;
-    var i = new Instafeed({
-        target: "header-instafeed",
-        get: "user",
-        userId: "1014516",
-        limit: 6,
-        accessToken: "2106621868.95809bd.6cedcfe289c44294b83e1602f419049e",
-        template: '<li class="col-xs-6 col-sm-4 col-md-2"><a target="_blank" href="{{link}}"><img src="{{image}}" /></a>'
-    }), a = new Instafeed({
-        target: "sidebar-instafeed",
-        get: "user",
-        userId: "1014516",
-        limit: 6,
-        accessToken: "2106621868.95809bd.6cedcfe289c44294b83e1602f419049e",
-        template: '<li><a target="_blank" href="{{link}}"><img src="{{image}}" /></a>'
-    });
-    i.run(), a.run(), e(".product-carousel").owlCarousel({
-        loop: !0,
-        margin: 30,
-        navText: ["", ""],
-        responsiveClass: !0,
-        responsive: {0: {items: 1, nav: !0}, 600: {items: 3, nav: !1}, 1e3: {items: 4, nav: !0, loop: !1}}
-    }), e("#slider-range").slider({
+    e("#slider-range").slider({
         range: !0, min: 0, max: 500, values: [0, 200], slide: function (o, i) {
             e("#amount").val("$" + i.values[0] + " - $" + i.values[1])
         }
@@ -42,6 +53,59 @@
         percentPosition: !0
     });
     e(window).load(function () {
+        Barba.Pjax.start();
+        var FadeTransition = Barba.BaseTransition.extend({
+            start: function() {
+                /**
+                 * This function is automatically called as soon the Transition starts
+                 * this.newContainerLoading is a Promise for the loading of the new container
+                 * (Barba.js also comes with an handy Promise polyfill!)
+                 */
+
+                // As soon the loading is finished and the old page is faded out, let's fade the new page
+                Promise
+                    .all([this.newContainerLoading, this.fadeOut()])
+                    .then(this.fadeIn.bind(this));
+            },
+
+            fadeOut: function() {
+                /**
+                 * this.oldContainer is the HTMLElement of the old Container
+                 */
+
+                return $(this.oldContainer).animate({ opacity: 0 }).promise();
+            },
+
+            fadeIn: function() {
+                /**
+                 * this.newContainer is the HTMLElement of the new Container
+                 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+                 * Please note, newContainer is available just after newContainerLoading is resolved!
+                 */
+
+                var _this = this;
+                var $el = $(this.newContainer);
+
+                $(this.oldContainer).hide();
+
+                $el.css({
+                    visibility : 'visible',
+                    opacity : 0
+                });
+
+                $el.animate({ opacity: 1 }, 400, function() {
+                    /**
+                     * Do not forget to call .done() as soon your transition is finished!
+                     * .done() will automatically remove from the DOM the old Container
+                     */
+
+                    _this.done();
+                });
+            }
+        });
+        Barba.Pjax.getTransition = function() {
+            return FadeTransition;
+        };
         s.masonry("layout")
     }), e(".mfp-youtube, .mfp-vimeo, .mfp-gmaps").magnificPopup({
         disableOn: 700,

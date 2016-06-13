@@ -19,8 +19,7 @@
                             <!-- Right nav -->
                             <ul class="nav navbar-nav">
                                 <li><a href="/">Главная</a></li>
-                                <li><a href="sitemap.xml">Карта блога</a></li>
-                                <li><a href="rss">RSS лента</a></li>
+                                <li><a href="/projects">Проекты</a></li>
                                 <li><a href="/contact">Контакты</a></li>
                                 <li><a href="/about">От автора</a></li>
                             </ul>
@@ -37,28 +36,23 @@
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.cm') }}" title="Наша бывшая площадка для продаж" target="_blank">
-                                <i class="fa fa-shopping-cart"></i>
-                            </a>
-                        </li>
-                        <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.facebook') }}" title="Наша бизнес страница" target="_blank">
+                            <a href="{{ config('blog.social.facebook') }}" title="Бизнес страница" target="_blank">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         </li>
                         <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.github') }}" title="Мой git репозиторий" target="_blank">
+                            <a href="{{ config('blog.social.github') }}" title="Git репозиторий" target="_blank">
                                 <i class="fa fa-github-alt"></i>
-                            </a>
-                        </li>
-                        <li class="header-social-list-item">
-                            <a href="{{ config('blog.social.vimeo') }}" title="Презентации некоторых товаров" target="_blank">
-                                <i class="fa fa-vimeo"></i>
                             </a>
                         </li>
                         <li class="header-social-list-item">
                             <a href="{{ config('blog.social.linkedin') }}" title="На самом деле просто профиль" target="_blank">
                                 <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="header-social-list-item">
+                            <a href="{{ config('blog.social.vimeo') }}" title="Презентации некоторых товаров" target="_blank">
+                                <i class="fa fa-vimeo"></i>
                             </a>
                         </li>
                     </ul>

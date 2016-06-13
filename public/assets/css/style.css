@@ -14,7 +14,7 @@ body {
     font-family: 'Fira Sans', sans-serif;
     color: #555;
     line-height: 1.5;
-    letter-spacing: .05em
+    letter-spacing: .03em
 }
 
 h1, h2, h3 {
@@ -46,7 +46,7 @@ a:hover {
 }
 
 h3 a:hover, span.price {
-    color: #ddbe86
+    color: #aaa
 }
 
 ul {
@@ -101,8 +101,8 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin-top: 10px;
     font-weight: 600;
     letter-spacing: .1em;
-    background-color: #ddbe86;
-    border: 1px solid #ddbe86;
+    background-color: #aaa;
+    border: 1px solid #aaa;
     color: #fff !important;
     display: inline-block;
     white-space: nowrap
@@ -113,8 +113,8 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .tg-btn:hover {
-    color: #ddbe86 !important;
-    border-color: #ddbe86
+    color: #aaa !important;
+    border-color: #aaa
 }
 
 .header {
@@ -179,13 +179,13 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .nav li.dropdown ul.dropdown-menu li a:focus, .nav li.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu li a:focus, .navbar-nav li a:focus, .navbar-nav li a:hover {
-    color: #ddbe86;
+    color: #aaa;
     background-color: transparent
 }
 
 .nav li.dropdown ul.dropdown-menu {
-    border-top: 1px solid #ddbe86;
-    border-bottom: 1px solid #ddbe86;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     border-radius: 0;
@@ -212,7 +212,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .nav li.dropdown ul.dropdown-menu li a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .nav li a:focus {
@@ -289,7 +289,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .shop-mega-menu .mega-container .menu-cart p a {
-    color: #ddbe86 !important
+    color: #aaa !important
 }
 
 .shop-mega-menu .mega-container .menu-cart p a:hover {
@@ -406,7 +406,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .header-social .header-social-list-item a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .header-search .search-form {
@@ -440,7 +440,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .header-search .search-btn .fa-search {
-    color: #ddbe86;
+    color: #aaa;
     font-size: 15px
 }
 
@@ -467,22 +467,22 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .sw-cat a:hover, .sw-title a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .sw-button a {
-    background-color: #ddbe86;
+    background-color: #aaa;
     text-transform: uppercase;
     letter-spacing: .1em;
     display: inline-block;
     font-weight: 700;
     color: #fff;
-    border: 1px solid #ddbe86
+    border: 1px solid #aaa
 }
 
 .sw-button a:hover {
     background-color: transparent !important;
-    color: #ddbe86
+    color: #aaa
 }
 
 .slotholder {
@@ -538,7 +538,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .audio:after, .video:after {
-    color: #ddbe86;
+    color: #aaa;
     font-size: 24px;
     background-color: #fff;
     line-height: 60px;
@@ -581,7 +581,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .content-area .breadcrumb li.active {
-    color: #ddbe86
+    color: #aaa
 }
 
 .post-item {
@@ -601,7 +601,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .post-header .post-categoris a {
-    background-color: #ddbe86;
+    background-color: #aaa;
     text-transform: uppercase;
     letter-spacing: .1em;
     display: inline-block;
@@ -621,7 +621,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .post-header .post-title a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .post-time .time {
@@ -664,7 +664,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .post-content .read-more a {
-    color: #ddbe86;
+    color: #aaa;
     font-size: 12px;
     letter-spacing: .1em;
     text-transform: uppercase;
@@ -672,7 +672,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     position: relative;
     display: inline-block;
     border-bottom: 1px solid transparent;
-    border-bottom-color: #ddbe86;
+    border-bottom-color: #aaa;
     margin-bottom: 20px
 }
 
@@ -713,14 +713,14 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .post-footer .post-comment-count a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .post-footer .post-comment-count a:before {
     content: '\f0e5';
     font-family: FontAwesome;
     font-size: 16px;
-    color: #ddbe86;
+    color: #aaa;
     display: inline-block;
     position: absolute;
     left: -25px
@@ -735,7 +735,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .post-footer .post-social-share .post-social-list-item a {
-    color: #ddbe86;
+    color: #aaa;
     font-size: 16px;
     margin-left: 5px
 }
@@ -762,7 +762,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .grid-style-post .post-time time:before {
-    color: #ddbe86;
+    color: #aaa;
     position: absolute
 }
 
@@ -801,7 +801,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .list-style-post .post-time time:before {
-    color: #ddbe86;
+    color: #aaa;
     position: absolute
 }
 
@@ -814,7 +814,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .quote-post .quote blockquote {
-    border: 1px solid #ddbe86;
+    border: 1px solid #aaa;
     padding: 70px 50px 60px;
     margin: 0;
     text-align: center
@@ -828,7 +828,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     font-family: 'Lora', serif;
     font-weight: 600;
     content: '\201D' !important;
-    color: #ddbe86;
+    color: #aaa;
     font-size: 90px;
     line-height: 95px;
     display: inline-block;
@@ -845,7 +845,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .quote-post .quote blockquote h4 {
-    color: #ddbe86;
+    color: #aaa;
     font-size: 12px;
     letter-spacing: .03em;
     font-weight: 700
@@ -860,7 +860,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .post-pagination .newer-post:hover, .post-pagination .older-post:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .post-pagination .newer-post:before, .post-pagination .older-post:after {
@@ -901,7 +901,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .pagination-list a.active, .pagination-list a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .carousel-fade .carousel-inner .item {
@@ -940,7 +940,7 @@ aside {
 }
 
 .widget-title:after, .widget-title:before {
-    border-top: 1px solid #ddbe86;
+    border-top: 1px solid #aaa;
     content: '';
     display: table-cell;
     position: relative;
@@ -968,8 +968,8 @@ aside {
 }
 
 .footer-widget .widget-content {
-    border-bottom: 1px solid #ddbe86;
-    min-height: 330px;
+    border-bottom: 1px solid #aaa;
+    min-height: 300px;
     margin-bottom: 60px
 }
 
@@ -983,14 +983,14 @@ aside {
     height: 34px;
     width: 34px;
     display: inline-block;
-    border: 1px solid #ddbe86;
+    border: 1px solid #aaa;
     margin-bottom: 10px;
-    color: #ddbe86;
+    color: #aaa;
     border-radius: 50%
 }
 
 .widget-social .widget-social-list-item a:hover {
-    background-color: #ddbe86;
+    background-color: #aaa;
     color: #fff
 }
 
@@ -1039,7 +1039,7 @@ aside {
 }
 
 .instagram-feed p a, .widget-categories ul li a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 #header-instafeed .col-md-2 {
@@ -1145,8 +1145,8 @@ aside {
 }
 
 .post-tag a:hover, .widget-tag a:hover {
-    color: #ddbe86;
-    border: 1px solid #ddbe86
+    color: #aaa;
+    border: 1px solid #aaa
 }
 
 .widget-subscribe p {
@@ -1168,7 +1168,7 @@ aside {
 }
 
 .widget-tweet .tweet a {
-    color: #ddbe86
+    color: #aaa
 }
 
 .widget-tweet .tweet ul li {
@@ -1197,7 +1197,7 @@ aside {
     font-family: FontAwesome;
     content: '\f017';
     position: absolute;
-    color: #ddbe86;
+    color: #aaa;
     left: 0
 }
 
@@ -1241,7 +1241,7 @@ article blockquote p, article blockquote:before {
 span.ui-slider-handle.ui-state-default.ui-corner-all {
     border: none;
     border-radius: 0;
-    background: #ddbe86
+    background: #aaa
 }
 
 span.ui-slider-handle.ui-state-default.ui-corner-all:focus {
@@ -1272,7 +1272,7 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:focus {
 
 .shop .sale:after, .shop-filter .button {
     letter-spacing: .1em;
-    background-color: #ddbe86
+    background-color: #aaa
 }
 
 .shop-filter .button {
@@ -1280,7 +1280,7 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:focus {
     padding: 10px 20px;
     font-weight: 600;
     font-size: 12px;
-    border: 1px solid #ddbe86;
+    border: 1px solid #aaa;
     color: #fff !important;
     float: right
 }
@@ -1328,7 +1328,7 @@ span.ui-slider-handle.ui-state-default.ui-corner-all:focus {
 .trending-item .post-meta span {
     font-size: 14px;
     font-weight: 700;
-    color: #ddbe86
+    color: #aaa
 }
 
 .blog-categoris .col-md-3 {
@@ -1391,7 +1391,7 @@ article blockquote {
 article blockquote:before {
     font-weight: 600;
     content: '\201C' !important;
-    color: #ddbe86;
+    color: #aaa;
     display: inline-block;
     position: absolute;
     left: 30px;
@@ -1424,14 +1424,14 @@ article blockquote p {
 }
 
 .post-footer .post-like a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .post-footer .post-like a:before {
     content: '\f004';
     font-family: FontAwesome;
     font-size: 16px;
-    color: #ddbe86;
+    color: #aaa;
     display: inline-block;
     position: absolute;
     left: -25px
@@ -1471,7 +1471,7 @@ article blockquote p {
 }
 
 .author-box .author-bio p.email a {
-    color: #ddbe86;
+    color: #aaa;
     font-size: 13px
 }
 
@@ -1546,7 +1546,7 @@ article blockquote p {
     position: absolute;
     top: 0;
     right: 0;
-    color: #ddbe86
+    color: #aaa
 }
 
 .single-post-comments .comment-wrap .comment-content .reply-link:hover {
@@ -1673,10 +1673,10 @@ article blockquote p {
 
 .shop .thumb-img .add-to-cart a {
     font-weight: 700;
-    color: #ddbe86;
+    color: #aaa;
     letter-spacing: .1em;
     text-transform: uppercase;
-    border-bottom: 1px solid #ddbe86;
+    border-bottom: 1px solid #aaa;
     padding-bottom: 4px
 }
 
@@ -1718,7 +1718,7 @@ article blockquote p {
 .shop .product-item span {
     font-size: 14px;
     font-weight: 700;
-    color: #ddbe86
+    color: #aaa
 }
 
 .owl-controls {
@@ -1737,7 +1737,7 @@ article blockquote p {
 }
 
 .owl-dot.active {
-    background-color: #ddbe86
+    background-color: #aaa
 }
 
 .shop-page .page-title {
@@ -1841,7 +1841,7 @@ article blockquote p {
 }
 
 .product-short-desc .price span {
-    color: #ddbe86;
+    color: #aaa;
     font-weight: 700
 }
 
@@ -1882,7 +1882,7 @@ article blockquote p {
 }
 
 .product-long-desc .nav-tabs > li.active > a, .product-long-desc .nav-tabs > li.active > a:focus, .product-long-desc .nav-tabs > li.active > a:hover {
-    color: #ddbe86;
+    color: #aaa;
     border: none
 }
 
@@ -1941,7 +1941,7 @@ article blockquote p {
 }
 
 .cart-table span {
-    color: #ddbe86;
+    color: #aaa;
     font-weight: 700
 }
 
@@ -2043,7 +2043,7 @@ article blockquote p {
 }
 
 .checkout-header p a {
-    color: #ddbe86;
+    color: #aaa;
     margin-left: 10px
 }
 
@@ -2063,7 +2063,7 @@ article blockquote p {
 }
 
 .billing-details .create-account {
-    color: #ddbe86;
+    color: #aaa;
     position: relative;
     padding-left: 25px
 }
@@ -2129,7 +2129,7 @@ article blockquote p {
 }
 
 .your-order .table-order tr td:last-child {
-    color: #ddbe86
+    color: #aaa
 }
 
 .your-order .table-order tfoot td {
@@ -2192,7 +2192,7 @@ article blockquote p {
 .about blockquote:before {
     font-weight: 600;
     content: '\201C' !important;
-    color: #ddbe86;
+    color: #aaa;
     display: inline-block;
     position: absolute;
     left: 0;
@@ -2233,20 +2233,20 @@ article blockquote p {
 }
 
 .contact-form .form .text:focus, .contact-form .form .textarea:focus {
-    border: 1px solid #ddbe86
+    border: 1px solid #aaa
 }
 
 .contact-form .form .form-submit .submit {
-    color: #ddbe86 !important;
+    color: #aaa !important;
     background: #fff;
-    border: 1px solid #ddbe86;
+    border: 1px solid #aaa;
     padding: 8px 25px;
     letter-spacing: .05em
 }
 
 .contact-form .form .form-submit .submit:hover {
     color: #fff !important;
-    background: #ddbe86
+    background: #aaa
 }
 
 .footer-menu {
@@ -2272,7 +2272,7 @@ article blockquote p {
 }
 
 .footer-menu ul li a:hover {
-    color: #ddbe86
+    color: #aaa
 }
 
 .footer-menu ul li:last-child a {
@@ -2290,7 +2290,7 @@ article blockquote p {
 }
 
 .scrollToTop {
-    background-color: #ddbe86;
+    background-color: #aaa;
     width: 30px;
     height: 30px;
     color: #fff;
@@ -2319,5 +2319,5 @@ article blockquote p {
 }
 
 .copyright a {
-    color: #ddbe86
+    color: #aaa
 }

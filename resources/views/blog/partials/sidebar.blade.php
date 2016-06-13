@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 no-barba">
     <div class="sidebar">
         <aside class="widget">
             <div class="widget-header">
@@ -6,9 +6,19 @@
             </div><!-- /.widget-header -->
             <div class="widget-content">
                 <div class="widget-about">
-                    <img src="{{ asset('assets/images/avatar.jpg') }}" alt="">
+                    <img src="{{ asset('assets/images/author.png') }}" alt="">
                     <p>{{ config('blog.about') }}</p>
                 </div><!-- /.widget-about -->
+            </div><!-- /.widget-content -->
+        </aside>
+        <aside class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">Случайная цитата</h3>
+            </div><!-- /.widget-header -->
+            <div class="widget-content">
+                <div class="widget-about">
+                    Если называть Python заменой BASIC, то тогда и трансформер Optimus Prime — это только замена грузовика. — Cory Dodt
+                </div>
             </div><!-- /.widget-content -->
         </aside>
         @if (Cache::has('posts'))
@@ -81,37 +91,7 @@
                 </div>
             </div><!-- /.widget-content -->
         </aside>
-        <aside class="widget">
-            <div class="widget-header">
-
-            </div><!-- /.widget-header -->
-            <div class="widget-content">
-                <img src="{{ asset('assets/images/ad.jpg') }}" alt="ad banner">
-            </div><!-- /.widget-content -->
-        </aside>
-        <aside class="widget">
-            <div class="widget-header">
-                <h3 class="widget-title">Facebook</h3>
-            </div><!-- /.widget-header -->
-            <div class="widget-content">
-                <div class="widget-facebook">
-                    <div class="fb-page"
-                         data-href="https://www.facebook.com/aurathemes"
-                         data-small-header="false"
-                         data-adapt-container-width="true"
-                         data-hide-cover="false"
-                         data-show-posts="true"
-                         data-show-facepile="true">
-                        <div class="fb-xfbml-parse-ignore">
-                            <blockquote cite="https://www.facebook.com/aurathemes">
-                                <a href="https://www.facebook.com/aurathemes">AuraThemes</a>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div><!-- /.widget-facebook -->
-            </div><!-- /.widget-content -->
-        </aside>
-        <aside class="widget">
+        {{--<aside class="widget">
             <div class="widget-header">
                 <h3 class="widget-title">Подписка</h3>
             </div><!-- /.widget-header -->
@@ -126,6 +106,6 @@
                 </div> <!-- ./widget-subscribe -->
                 <!-- /.widget-subscribe -->
             </div><!-- /.widget-content -->
-        </aside>
+        </aside>--}}
     </div><!-- /.sidebar -->
 </div><!-- /.col-md-3 -->

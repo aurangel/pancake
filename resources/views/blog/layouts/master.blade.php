@@ -34,9 +34,6 @@
     <!-- Font Awesome Icon Stylesheet  -->
     <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
 
-    <!-- Owl Carousel Stylesheet -->
-    <link href="{{ asset('assets/css/owl.carousel.css') }}" rel="stylesheet">
-
     <!-- Hover Efect Stylesheet -->
     <link href="{{ asset('assets/css/hover-min.css') }}" rel="stylesheet">
 
@@ -66,18 +63,24 @@
 <body>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+    (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1454407291507305";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <!-- facebook like box script -->
 
 @include('blog.partials.page-nav')
 
-@yield('content')
+<div id="barba-wrapper">
+    <div class="barba-container">
+        @yield('content')
+    </div>
+</div>
 
 @include('blog.partials.page-footer')
 
@@ -95,17 +98,8 @@
 <!-- Smooth Website Scroll -->
 <script src="{{ asset('assets/js/SmoothScroll.js') }}"></script>
 
-<!-- Owl Carousel -->
-<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-
 <!-- Masonry grid layout library -->
 <script src="{{ asset('assets/js/masonry.pkgd.min.js') }}"></script>
-
-<!-- Instagram photos -->
-<script src="{{ asset('assets/js/instafeed.min.js') }}"></script>
-
-<!-- Magnific Popup -->
-<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
 
 <!-- Tweetie jquery Feed Plugin -->
 <script src="{{ asset('assets/js/tweetie.min.js') }}"></script>
@@ -113,8 +107,15 @@
 <!-- Simple Lens Images -->
 <script src="{{ asset('assets/js/jquery.simpleLens.min.js') }}"></script>
 
+<!-- Magnific Popup -->
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+
+<!-- Smooth transitions -->
+<script src="{{ asset('assets/js/barba.min.js') }}"></script>
+
 <!-- All custom jQuery -->
 <script src="{{ asset('assets/js/custom.js') }}"></script>
+
 @yield('scripts')
 
 </body>

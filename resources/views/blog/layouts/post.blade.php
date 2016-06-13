@@ -66,12 +66,12 @@
                             </div><!-- /.author-avatar -->
                             <div class="author-bio">
                                 <h3><a href="#">{{ config('blog.author') }}</a></h3>
-                                <p>Привет! Меня зовут Роман. В моем блоге вы можете почитать мои мысли, обрести спокойствие и насладиться современным дизайном, который ещё не видели. И вряд ли увидите.</p>
-                                <p class="email"><a href="mailto:admiralexo@gmail.com">admiralexo@gmail.com</a></p>
+                                <p>Просто занимаюсь разработкой веб-проектов на backend'е. Пишу
+                                    про микростоки, веб-технологии и о том, о чём душа пожелает.</p>
+                                <p class="email"><a href="mailto:{{ config('blog.contact_email') }}">{{ config('blog.contact_email') }}</a></p>
                             </div><!-- /.author-bio -->
                         </div><!-- /.author-box -->
                         <div class="related-post">
-                            <h3 class="title">Вам также понравится</h3>
                             <div class="row">
                                 @if ($post->newerPost($tag))
                                     <div class="col-xs-6 col-sm-4">
@@ -87,20 +87,8 @@
                                         </div><!-- /.related-post-item -->
                                     </div><!-- /.col-sm-6 col-md-4 -->
                                 @endif
-                                    <div class="col-xs-6 col-sm-4">
-                                        <div class="related-post-item">
-                                            <a href="{!! $post->url($tag) !!}">
-                                                <img src="{{ pageImage($post->page_image) }}"
-                                                     alt="Post Thumbnail" />
-                                            </a>
-                                            <h3><a href="{!! $post->url($tag) !!}">{{ $post->title }}</a></h3>
-                                            <div class="date">
-                                                {{ $post->published_at->format('F j, Y') }}
-                                            </div>
-                                        </div><!-- /.related-post-item -->
-                                    </div><!-- /.col-sm-6 col-md-4 -->
                                 @if ($post->olderPost($tag))
-                                    <div class="col-xs-6 col-sm-4">
+                                    <div class="col-xs-6 col-sm-4" style="float: right;">
                                         <div class="related-post-item">
                                             <a href="{!! $post->olderPost($tag)->url($tag) !!}">
                                                 <img src="{{ pageImage($post->olderPost($tag)->page_image) }}"
@@ -116,7 +104,14 @@
                             </div><!-- /.row -->
                         </div><!-- /.related-post -->
                         <div class="write-a-comment">
-                            @include('blog.partials.disqus')
+                            <div id="disqus_thread"></div>
+                            <noscript>
+                                Please enable JavaScript to view the
+                                <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                            </noscript>
+                            <a href="http://disqus.com" class="dsq-brlink">
+                                comments powered by <span class="logo-disqus">Disqus</span>
+                            </a>
                         </div><!-- /.write-a-comment -->
                     </div><!-- /.content-area -->
                 </div><!-- /.col-md-9 -->

@@ -3,31 +3,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-3">
-                    @if (\Cache::has('posts'))
-                        <aside>
-                            <div class="widget-header">
-                                <h3 class="widget-title">Недавние записи</h3>
-                            </div><!-- /.widget-header -->
-                            <div class="widget-content">
-                                @foreach (\Cache::get('posts') as $post)
-                                    <div class="widget-recent-post">
-                                        <div class="recent-post-item">
-                                            <div class="post-img">
-                                                <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
-                                                     alt="">
-                                            </div><!-- /.post-img -->
-                                            <div class="post-meta">
-                                                <h3><a href="{{ $post->url() }}">{{ $post->title }}</a></h3>
-                                                <div class="date">
-                                                    {{ $post->published_at->format('F j, Y') }}
-                                                </div>
-                                            </div><!-- /.post-meta -->
-                                        </div><!-- /.recent-post-item -->
-                                    </div><!-- /.widget-recent-post -->
-                                @endforeach
-                            </div><!-- /.widget-content -->
-                        </aside>
-                    @endif
+                    <aside class="widget">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Facebook</h3>
+                        </div><!-- /.widget-header -->
+                        <div class="widget-content">
+                            <div class="widget-facebook">
+                                <div class="fb-page"
+                                     data-href="https://www.facebook.com/aurathemes"
+                                     data-small-header="false"
+                                     data-adapt-container-width="true"
+                                     data-hide-cover="false"
+                                     data-show-posts="false"
+                                     data-show-facepile="true">
+                                    <div class="fb-xfbml-parse-ignore">
+                                        <blockquote cite="https://www.facebook.com/aurathemes">
+                                            <a href="https://www.facebook.com/aurathemes">AuraThemes</a>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div><!-- /.widget-facebook -->
+                        </div><!-- /.widget-content -->
+                    </aside>
                 </div><!-- /.col-md-4 -->
                 <div class="col-md-4 col-lg-4 col-lg-offset-1">
                     <aside>
@@ -63,7 +60,14 @@
         <ul>
             <li><a href="/about">Кто я такой</a></li>
             <li><a href="/contact">Напиши мне</a></li>
-            <li><a href="humans.txt">humans.txt</a></li>
+            <li><a class="no-barba" href="sitemap.xml">Карта блога</a></li>
+            <li><a class="no-barba" href="rss">RSS лента</a></li>
+            <li><a class="no-barba" href="humans.txt">humans.txt</a></li>
         </ul>
     </div><!-- /.footer-menu -->
+    <div class="copyright">
+        <div class="container">
+            <p>Блог о веб-разработке © 2016. All Rights Reserved.</p>
+        </div>
+    </div>
 </footer>

@@ -6,12 +6,13 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="content-area">
+                        <div class="row">
                         @foreach ($posts as $k => $post)
-                            <article class="post-item">
+                        <div class="col-md-6">
+                            <article class="post-item grid-style-post">
                                 <div class="thumb-img">
                                     <a href="{{ $post->url($tag) }}">
-                                        <img src="{{ asset(config('blog.uploads.webpath') . $post->page_image) }}"
-                                             alt="Post Thumbnail"/>
+                                        <img src="{{ pageImage($post->page_image) }}" alt="Post Thumbnail"/>
                                     </a>
                                 </div><!-- /.thumb-img -->
                                 <div class="post-header">
@@ -21,11 +22,8 @@
                                         @endif
                                     </div>
                                     <h2 class="post-title"><a href="{{ $post->url($tag) }}">{{ $post->title }}</a></h2>
-                                </div><!-- /.post-header -->
-                                <div class="post-time">
-                                    <span class="time">{{ $post->published_at->format('F j, Y') }}</span>
                                     <div class="small-underline"></div>
-                                </div> <!-- /.post-time -->
+                                </div><!-- /.post-header -->
                                 <div class="post-content">
                                     @if ($post->subtitle)
                                         <p>{{ $post->subtitle }}</p>
@@ -38,9 +36,9 @@
                                 <div class="post-footer">
                                     <div class="row">
                                         <div class="col-xs-6">
-                                            <div class="post-comment-count">
-                                                <a href="#">3 Comments</a>
-                                            </div>
+                                            <div class="post-time">
+                                                <span class="time">{{ $post->published_at->format('F j, Y') }}</span>
+                                            </div> <!-- /.post-time -->
                                         </div><!-- /.col-md-6 -->
                                         <div class="col-xs-6">
                                             <div class="post-social-share">
@@ -62,19 +60,20 @@
                                         </div><!-- /.col-md-6 -->
                                     </div><!-- /.row -->
                                 </div><!-- /.post-footer -->
-                            </article>
+                            </article><!-- /.grid-style-post -->
+                        </div><!-- /.col-md-6 -->
                         @endforeach
-
+                        </div>
                         <div class="post-pagination">
                             <div class="row">
-                                    <div class="col-xs-6 col-sm-4 prev-post"
-                                         @if ($posts->currentPage() <= 1)
-                                            style="visibility: hidden;"
-                                         @endif
-                                    >
-                                        <a href="{!! $posts->url($posts->currentPage() - 1) !!}"
-                                           class="newer-post">Newer {{ $tag ? $tag->tag : '' }} Posts</a>
-                                    </div> <!-- /.col-sm-4 -->
+                                <div class="col-xs-6 col-sm-4 prev-post"
+                                     @if ($posts->currentPage() <= 1)
+                                        style="visibility: hidden;"
+                                    @endif
+                                >
+                                    <a href="{!! $posts->url($posts->currentPage() - 1) !!}"
+                                       class="newer-post">Позднее {{ $tag ? $tag->tag : '' }}</a>
+                                </div> <!-- /.col-sm-4 -->
                                 <div class="col-xs-6 col-sm-4 pagination-list hidden-xs">
                                     <span>
                                         {!! with(new \App\Pagination($posts))->render() !!}
@@ -83,11 +82,12 @@
                                 @if ($posts->hasMorePages())
                                     <div class="col-xs-6 col-sm-4 next-post">
                                         <a href="{!! $posts->nextPageUrl() !!}"
-                                           class="older-post">Older {{ $tag ? $tag->tag : '' }} Posts</a>
+                                           class="older-post">Ранее {{ $tag ? $tag->tag : '' }}</a>
                                     </div><!-- /.col-sm-4 -->
                                 @endif
                             </div>
                         </div><!-- /.post-pagination -->
+
                     </div><!-- /.content-area -->
                 </div><!-- /.col-md-9 -->
                 @include('blog.partials.sidebar')
