@@ -1,10 +1,6 @@
 ## Введение
 
-Pancake это мой личный блог написанный на Laravel 5.2 и PJAX. Надеюсь, никому не придет в голову посылать сюда pull-request :)
-
-### Административная панель
-
-![](http://aurathemes.ru/admin.png)
+Pancake используется как платформа для ведения личных записей. Написан на Laravel 5.2, с использованием PJAX. Имеется административная CRUD панель, карта сайта, RSS лента и мгновенный переход по страницам.
 
 ## Библиотеки
 
@@ -13,17 +9,6 @@ Pancake это мой личный блог написанный на Laravel 5.
 * [selectize/selectize](https://github.com/selectize/selectize.js);
 * [OwlFonk/OwlCarousel](https://github.com/OwlFonk/OwlCarousel);
 * [metafizzy/isotope](https://github.com/metafizzy/isotope);
-
-## В планах
-
-* php тестирование;
-
-## Особенности
-
-* Административная панель;
-* Rss лента;
-* Карта сайта;
-* И ещё что-то;
 
 ## Требования к окружению
 
