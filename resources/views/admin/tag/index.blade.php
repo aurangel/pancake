@@ -9,7 +9,7 @@
                 </h3>
             </div>
             <div class="col-md-6 text-right">
-                <a href="/admin/tag/create" class="btn btn-success btn-md">
+                <a href="/pancake/admin/tag/create" class="btn btn-success btn-md">
                     <i class="fa fa-plus-circle"></i> New Tag
                 </a>
             </div>
@@ -51,7 +51,7 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="/admin/tag/{{ $tag->id }}/edit"
+                                <a href="/pancake/admin/tag/{{ $tag->id }}/edit"
                                    class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> Edit
                                 </a>

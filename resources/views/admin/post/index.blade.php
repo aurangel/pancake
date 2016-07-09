@@ -9,7 +9,7 @@
                 </h3>
             </div>
             <div class="col-md-6 text-right">
-                <a href="/admin/post/create" class="btn btn-success btn-md">
+                <a href="{{ url('admin/post/create') }}" class="btn btn-success btn-md">
                     <i class="fa fa-plus-circle"></i> New Post
                 </a>
             </div>
@@ -39,11 +39,11 @@
                             <td>{{ $post->title }}</td>
                             <td>{{ $post->subtitle }}</td>
                             <td>
-                                <a href="/admin/post/{{ $post->id }}/edit"
+                                <a href="{{ url('admin/post') }}/{{ $post->id }}/edit"
                                    class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> Edit
                                 </a>
-                                <a href="/blog/{{ $post->slug }}"
+                                <a href="{{ url('blog') }}/{{ $post->slug }}"
                                    class="btn btn-xs btn-warning">
                                     <i class="fa fa-eye"></i> View
                                 </a>

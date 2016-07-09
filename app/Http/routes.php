@@ -21,6 +21,7 @@ Route::get('blog/{slug}', 'BlogController@showPost');
 Route::get('contact', 'ContactController@showForm');
 Route::post('contact', 'ContactController@sendContactInfo');
 Route::get('about', 'BlogController@showAbout');
+Route::get('projects', 'BlogController@showProjects');
 Route::get('rss', 'BlogController@rss');
 Route::get('sitemap.xml', 'BlogController@siteMap');
 

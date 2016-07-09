@@ -9,13 +9,12 @@ return [
     'rss_size' => 20,
     'uploads' => [
         'storage' => 'local',
-        'webpath' => '/uploads/',
+        'webpath' => '/../pancake/uploads/',
     ],
     'social' => [
         'github' => 'https://github.com/aurangel',
-        'facebook' => 'https://www.facebook.com/aurathemes',
         'vimeo' => 'https://vimeo.com/user52267802',
-        'linkedin' => 'https://ru.linkedin.com/in/rvlasenko',
-        'personal' => 'https://rvlasenko.ru',
+        //'linkedin' => 'https://ru.linkedin.com/in/rvlasenko',
+        'personal' => 'https://aurathemes.ru',
     ]
 ];

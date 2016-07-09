@@ -52,7 +52,7 @@ class TagController extends Controller
         }
         $tag->save();
 
-        return redirect('/admin/tag')->withSuccess("The tag '$tag->tag' was created");
+        return redirect('/pancake/admin/tag')->withSuccess("The tag '$tag->tag' was created");
     }
 
     /**
@@ -87,7 +87,7 @@ class TagController extends Controller
         }
         $tag->save();
 
-        return redirect("/admin/tag/$id/edit")->withSuccess("Changes saved.");
+        return redirect("/pancake/admin/tag/$id/edit")->withSuccess("Changes saved.");
     }
 
     /**
@@ -101,6 +101,6 @@ class TagController extends Controller
         $tag = Tag::findOrFail($id);
         $tag->delete();
 
-        return redirect('/admin/tag')->withSuccess("The '$tag->tag' tag has been deleted.");
+        return redirect('/pancake/admin/tag')->withSuccess("The '$tag->tag' tag has been deleted.");
     }
 }

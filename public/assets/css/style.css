@@ -1740,25 +1740,7 @@ article blockquote p {
     background-color: #aaa
 }
 
-.shop-page .page-title {
-    background-image: url(../images/shop-header.jpg);
-    min-height: 200px;
-    width: 100%;
-    margin-bottom: 50px;
-    position: relative
-}
 
-.shop-page .page-title h1 {
-    font-size: 36px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
 
 .product-gallery {
     margin-bottom: 50px

@@ -82,7 +82,7 @@
                                             </a>
                                             <h3><a href="{!! $post->newerPost($tag)->url($tag) !!}">{{ $post->newerPost($tag)->title }}</a></h3>
                                             <div class="date">
-                                                {{ $post->published_at->format('F j, Y') }}
+                                                {{ $post->newerPost($tag)->published_at->format('F j, Y') }}
                                             </div>
                                         </div><!-- /.related-post-item -->
                                     </div><!-- /.col-sm-6 col-md-4 -->
@@ -96,7 +96,7 @@
                                             </a>
                                             <h3><a href="{!! $post->olderPost($tag)->url($tag) !!}">{{ $post->olderPost($tag)->title }}</a></h3>
                                             <div class="date">
-                                                {{ $post->published_at->format('F j, Y') }}
+                                                {{ $post->olderPost($tag)->published_at->format('F j, Y') }}
                                             </div>
                                         </div><!-- /.related-post-item -->
                                     </div><!-- /.col-sm-6 col-md-4 -->
@@ -119,34 +119,4 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.main-content -->
-    <section id="blog-categories" class="blog-categoris">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat1.jpg') }}" alt="Post Category">
-                        <a href="#">Жизнь</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat4.jpg') }}" alt="Post Category">
-                        <a href="#">Код</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat2.jpg') }}" alt="Post Category">
-                        <a href="#">Магазин</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat3.jpg') }}" alt="Post Category">
-                        <a href="#">Бездна</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section> <!-- /.blog-categoris -->
 @stop

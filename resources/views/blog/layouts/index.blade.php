@@ -7,6 +7,7 @@
                 <div class="col-md-9">
                     <div class="content-area">
                         <div class="row">
+                        @if ($posts->count() > 0)
                         @foreach ($posts as $k => $post)
                         <div class="col-md-6">
                             <article class="post-item grid-style-post">
@@ -63,6 +64,9 @@
                             </article><!-- /.grid-style-post -->
                         </div><!-- /.col-md-6 -->
                         @endforeach
+                        @else
+                            По вашему запросу ничего найдено не было...
+                        @endif
                         </div>
                         <div class="post-pagination">
                             <div class="row">
@@ -94,35 +98,4 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.main-content -->
-
-    <section id="blog-categories" class="blog-categoris">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat1.jpg') }}" alt="Post Category">
-                        <a href="#">Жизнь</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat4.jpg') }}" alt="Post Category">
-                        <a href="#">Код</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat2.jpg') }}" alt="Post Category">
-                        <a href="#">Магазин</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="category-item">
-                        <img src="{{ asset('assets/images/categories/cat3.jpg') }}" alt="Post Category">
-                        <a href="#">Бездна</a>
-                    </div><!-- /.category-item -->
-                </div> <!-- /.col-md-3 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section> <!-- /.blog-categoris -->
 @stop

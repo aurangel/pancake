@@ -45,13 +45,12 @@ class BlogIndexData extends Job
     protected function normalIndexData()
     {
         $posts = Post::with('tags')
-            ->where('published_at', '<=', Carbon::now())
             ->where('is_draft', 0)
             ->orderBy('published_at', 'desc')
             ->paginate(config('blog.posts_per_page'));
 
         if (!Cache::has('posts')) {
-            Cache::put('posts', $posts, Carbon::now()->addDay());
+            Cache::put('posts', $posts, Carbon::now()->addHour());
         }
 
         return [

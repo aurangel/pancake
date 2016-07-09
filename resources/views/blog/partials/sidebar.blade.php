@@ -48,17 +48,15 @@
         @endif
         <aside class="widget">
             <div class="widget-header">
-                <h3 class="widget-title">Категории</h3>
+                <h3 class="widget-title">Случайное видео</h3>
             </div><!-- /.widget-header -->
             <div class="widget-content">
-                <div class="widget-categories">
-                    <ul>
-                        <li><a href="#">Жизнь (0)</a></li>
-                        <li><a href="#">Код (0)</a></li>
-                        <li><a href="#">Креатив (2)</a></li>
-                        <li><a href="#">Бездна (7)</a></li>
-                    </ul>
-                </div>
+                <div class="footer-widget-video">
+                    <p>Иногда здесь появляются вдохновляющие видеоролики</p>
+                    <a class="mfp-youtube" href="https://www.youtube.com/watch?v=mcixldqDIEQ">
+                        <img src="http://aurathemes.ru/pancake/assets/images/video.jpg" alt="Click to Watch the Video">
+                    </a>
+                </div><!-- /.footer-widget-video -->
             </div><!-- /.widget-content -->
         </aside>
         <aside class="widget">

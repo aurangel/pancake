@@ -29,7 +29,6 @@ class BlogSearchData extends Job
     public function handle()
     {
         $posts = Post::with('tags')
-            ->where('published_at', '<=', Carbon::now())
             ->where('title', 'LIKE', '%' . $this->query . '%')
             ->where('is_draft', 0)
             ->orderBy('published_at', 'desc')
