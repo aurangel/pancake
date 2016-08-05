@@ -1,6 +1,4 @@
-[![Software License](https://img.shields.io/badge/license-GPL-brightgreen.svg?style=flat-square)](LICENSE.md)
-
-# Pancake
+# Pancake [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 Простая платформа для ведения личных записей, написанная на Laravel 5.2.
 
 ## Возможности
