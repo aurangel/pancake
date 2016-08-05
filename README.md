@@ -1,44 +1,44 @@
-## Введение
+[![Software License](https://img.shields.io/badge/license-GPL-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-Pancake используется как платформа для ведения личных записей. Написан на Laravel 5.2, с использованием PJAX. Имеется административная CRUD панель, карта сайта, RSS лента и мгновенный переход по страницам.
+# Pancake
+Простая платформа для ведения личных записей, написанная на Laravel 5.2.
 
-## Библиотеки
+## Возможности
+* Навигация без перезагрузки страницы (PJAX)
+* Административная часть
+    * Авторизация пользователей
+    * Работа с записями и тегами (CRUD)
+    * Загрузка изображений на сервер
+* DISQUS комментарии
+* Случайные цитаты
+* Отправка email
+* Карта сайта
+* RSS лента
 
-* [amsul/pickadate](https://github.com/amsul/pickadate.js);
-* [luruke/barba.js](https://github.com/luruke/barba.js);
-* [selectize/selectize](https://github.com/selectize/selectize.js);
-* [OwlFonk/OwlCarousel](https://github.com/OwlFonk/OwlCarousel);
-* [metafizzy/isotope](https://github.com/metafizzy/isotope);
-
-## Требования к окружению
-
-* PHP 5.5+
-* Laravel 5.2
-
-## Установка
-
-### 1. Клонировать репу
+## Установка (Laravel 5.x)
+### Клонировать репозиторий
 
     git clone https://github.com/aurangel/pancake
 
-### 2. Установить Composer
+### Установить Composer зависимости
 
-    cd laravel-blog
+    cd pancake
     composer install
     
-### 3. Настроить базу данных
+### Настроить подключение и базу данных
 
-Внести данные для подключения в .env, затем выполнить: 
+Ввести данные для подключения в .env файле, в корне приложения, затем там же выполнить: 
 
     php artisan migrate
 
-Усеять просторные поля базы данных, если потребуется: 
+Если нужно, усеять просторные поля базы данных фейковыми данными: 
 
     php artisan db:seed
 
+## Библиотеки
 
-## Лицензия
-
-Copyright (c) 2016 aurangel.
-
-The MIT License (MIT). Please see [Opensource MIT License](http://www.opensource.org/licenses/MIT) for more information.
+- [amsul/pickadate](https://github.com/amsul/pickadate.js)
+- [luruke/barba.js](https://github.com/luruke/barba.js)
+- [selectize/selectize](https://github.com/selectize/selectize.js)
+- [OwlFonk/OwlCarousel](https://github.com/OwlFonk/OwlCarousel)
+- [metafizzy/isotope](https://github.com/metafizzy/isotope)
